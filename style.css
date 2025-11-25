@@ -1,0 +1,56 @@
+:root {
+    /* Paleta de Colores (Se pueden ajustar según los colores del colegio) */
+    --color-primary: #003366;
+    /* Azul oscuro institucional */
+    --color-secondary: #ffffff;
+    /* Blanco */
+    --color-accent: #d4af37;
+    /* Dorado/Amarillo (común en escudos) */
+
+    --color-text: #333333;
+    /* Gris oscuro para texto */
+    --color-bg: #f4f4f4;
+    /* Gris muy claro para fondos */
+
+    /* Tipografía */
+    --font-main: system-ui, -apple-system, sans-serif;
+}
+
+/* =========================================
+   Reset Básico (Normalización)
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Manejo intuitivo del tamaño de cajas */
+}
+
+/* =========================================
+   Estilos Base
+   ========================================= */
+body {
+    font-family: var(--font-main);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Imágenes responsivas */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Enlaces sin decoración por defecto */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Listas sin viñetas por defecto */
+ul {
+    list-style: none;
+}
