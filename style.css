@@ -1,11 +1,14 @@
+/* =========================================
+   Variables Globales (Custom Properties)
+   ========================================= */
 :root {
-    /* Paleta de Colores (Se pueden ajustar según los colores del colegio) */
+    /* Paleta de Colores */
     --color-primary: #003366;
     /* Azul oscuro institucional */
     --color-secondary: #ffffff;
     /* Blanco */
     --color-accent: #d4af37;
-    /* Dorado/Amarillo (común en escudos) */
+    /* Dorado/Amarillo */
 
     --color-text: #333333;
     /* Gris oscuro para texto */
@@ -13,7 +16,8 @@
     /* Gris muy claro para fondos */
 
     /* Tipografía */
-    --font-main: system-ui, -apple-system, sans-serif;
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
 }
 
 /* =========================================
@@ -23,18 +27,30 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* Manejo intuitivo del tamaño de cajas */
 }
 
 /* =========================================
    Estilos Base
    ========================================= */
 body {
-    font-family: var(--font-main);
+    font-family: var(--font-body);
     background-color: var(--color-bg);
     color: var(--color-text);
     line-height: 1.6;
     font-size: 16px;
+}
+
+/* Encabezados */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.5em;
 }
 
 /* Imágenes responsivas */
@@ -53,4 +69,39 @@ a {
 /* Listas sin viñetas por defecto */
 ul {
     list-style: none;
+}
+
+/* =========================================
+   Utilidades de Tipografía (Para Pruebas)
+   ========================================= */
+.font-heading {
+    font-family: var(--font-heading);
+}
+
+.font-body {
+    font-family: var(--font-body);
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.fw-800 {
+    font-weight: 800;
 }
