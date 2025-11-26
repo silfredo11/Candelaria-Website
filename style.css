@@ -1,21 +1,34 @@
 /* =========================================
    Variables Globales (Custom Properties)
    ========================================= */
+
 :root {
-    /* Paleta de Colores */
-    --color-primary: #003366;
-    /* Azul oscuro institucional */
-    --color-secondary: #ffffff;
-    /* Blanco */
-    --color-accent: #d4af37;
-    /* Dorado/Amarillo */
+    /* --- BASES NEUTRAS (Para que la web respire) --- */
+    --bg-body: #F9F9F9;
+    /* Fondo general de la pagina (no blanco puro) */
+    --bg-card: #FFFFFF;
+    /* Fondo de las tarjetas o secciones */
+    --text-main: #333333;
+    /* Color del texto de parrafos (más leible) */
+    --text-light: #666666;
+    /* Color para fechas o textos secundarios */
 
-    --color-text: #333333;
-    /* Gris oscuro para texto */
-    --color-bg: #f4f4f4;
-    /* Gris muy claro para fondos */
+    /* --- COLORES DE MARCA (Identidad del Colegio) --- */
+    --primary-red: #EE2A35;
+    /* Rojo del logo: Para Botones principales y Títulos */
+    --primary-dark: #B71C25;
+    /* Rojo oscuro: Para el Footer o Menu de navegación */
 
-    /* Tipografía */
+    /* --- ACENTOS (Detalles) --- */
+    --accent-yellow: #FFD700;
+    /* Un amarillo más 'dorado', menos chillón que el del logo */
+    --accent-blue: #0056b3;
+    /* Azul solido para enlaces (links) */
+
+    /* --- EXITO/ERROR (Funcional) --- */
+    --status-success: #28a745;
+    /* Verde para mensajes de 'Formulario enviado' */
+
     --font-heading: 'Montserrat', sans-serif;
     --font-body: 'Open Sans', sans-serif;
 }
