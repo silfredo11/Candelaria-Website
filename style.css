@@ -1,15 +1,14 @@
 /* =========================================
    Variables Globales (Custom Properties)
    ========================================= */
-
 :root {
     /* --- BASES NEUTRAS (Para que la web respire) --- */
     --bg-body: #F9F9F9;
-    /* Fondo general de la pagina (no blanco puro) */
+    /* Fondo general de la pagina */
     --bg-card: #FFFFFF;
     /* Fondo de las tarjetas o secciones */
     --text-main: #333333;
-    /* Color del texto de parrafos (más leible) */
+    /* Color del texto de parrafos */
     --text-light: #666666;
     /* Color para fechas o textos secundarios */
 
@@ -21,16 +20,34 @@
 
     /* --- ACENTOS (Detalles) --- */
     --accent-yellow: #FFD700;
-    /* Un amarillo más 'dorado', menos chillón que el del logo */
+    /* Amarillo dorado */
     --accent-blue: #0056b3;
-    /* Azul solido para enlaces (links) */
+    /* Azul solido para enlaces */
 
     /* --- EXITO/ERROR (Funcional) --- */
     --status-success: #28a745;
-    /* Verde para mensajes de 'Formulario enviado' */
 
+    /* Tipografía - Familias */
     --font-heading: 'Montserrat', sans-serif;
     --font-body: 'Open Sans', sans-serif;
+
+    /* Tipografía - Tamaños (Escala Modular) */
+    --text-xs: 0.75rem;
+    /* 12px - Notas al pie, etiquetas pequeñas, detalles legales */
+    --text-sm: 0.875rem;
+    /* 14px - Fechas, metadatos, textos secundarios */
+    --text-base: 1rem;
+    /* 16px - Texto principal (Párrafos), enlaces del menú */
+    --text-lg: 1.125rem;
+    /* 18px - Intros, destacados, subtítulos pequeños (h5, h6) */
+    --text-xl: 1.25rem;
+    /* 20px - Títulos de tarjetas, secciones menores (h4) */
+    --text-2xl: 1.5rem;
+    /* 24px - Títulos de sección estándar (h3) */
+    --text-3xl: 2rem;
+    /* 32px - Títulos principales de página (h2) */
+    --text-4xl: 2.5rem;
+    /* 40px - Títulos Hero o Portada (h1) */
 }
 
 /* =========================================
@@ -47,10 +64,10 @@
    ========================================= */
 body {
     font-family: var(--font-body);
-    background-color: var(--color-bg);
-    color: var(--color-text);
+    background-color: var(--bg-body);
+    color: var(--text-main);
     line-height: 1.6;
-    font-size: 16px;
+    font-size: var(--text-base);
 }
 
 /* Encabezados */
@@ -64,6 +81,23 @@ h6 {
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 0.5em;
+    color: var(--primary-red);
+}
+
+h1 {
+    font-size: var(--text-4xl);
+}
+
+h2 {
+    font-size: var(--text-3xl);
+}
+
+h3 {
+    font-size: var(--text-2xl);
+}
+
+h4 {
+    font-size: var(--text-xl);
 }
 
 /* Imágenes responsivas */
@@ -76,7 +110,7 @@ img {
 /* Enlaces sin decoración por defecto */
 a {
     text-decoration: none;
-    color: inherit;
+    color: var(--accent-blue);
 }
 
 /* Listas sin viñetas por defecto */
