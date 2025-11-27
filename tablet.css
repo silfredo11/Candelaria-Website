@@ -1,0 +1,15 @@
+/* =========================================
+   Estilos para Tablet - min-width: 768px
+   ========================================= */
+
+/* Header & Navegación */
+.nav__list {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.nav__link {
+    font-size: var(--text-sm);
+    padding: 0;
+}

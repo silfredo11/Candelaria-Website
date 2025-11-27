@@ -1,0 +1,14 @@
+/* =========================================
+   Estilos para PC (Desktop) - min-width: 1024px
+   ========================================= */
+
+/* Ajustes de Header para pantallas grandes */
+.nav__list {
+    gap: 2.5rem;
+    /* Más espacio entre enlaces */
+}
+
+.nav__link {
+    font-size: var(--text-base);
+    /* Texto un poco más grande */
+}
