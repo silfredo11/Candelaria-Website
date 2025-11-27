@@ -275,3 +275,51 @@ ul {
     display: block;
     border-bottom: 1px solid var(--color-border);
 }
+
+/* --- Estilos base del botón --- */
+/* --- 1. SEPARACIÓN DE ELEMENTOS (Soluciona lo "pegado") --- */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    /* Espacio generoso entre cada enlace */
+    list-style: none;
+}
+
+/* --- 2. EL BOTÓN (Soluciona forma y texto) --- */
+.btn-cta {
+    /* CLAVE 1: inline-flex hace que la caja se adapte al contenido correctamente */
+    width: 120px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Colores */
+    background-color: var(--color-primary);
+    /* O usa #0056b3 si prefieres azul */
+    color: #FFFFFF !important;
+    /* ¡IMPORTANTE! Fuerza el texto blanco */
+
+    /* Forma */
+    border-radius: 50px;
+    padding: 10px 28px;
+    /* Relleno interno */
+    font-weight: 600;
+
+    /* CLAVE 2: Impide que la palabra "Estudiantes" se parta en dos líneas */
+    white-space: nowrap;
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* --- 3. EL HOVER (Soluciona el problema de ponerse blanco) --- */
+.btn-cta:hover {
+    background-color: var(--color-primary-hover);
+    /* Un tono más oscuro del fondo */
+    color: #FFFFFF !important;
+    /* Mantiene el texto blanco */
+    transform: translateY(-2px);
+    /* Pequeña animación hacia arriba */
+}
