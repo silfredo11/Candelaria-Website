@@ -19,7 +19,6 @@
     --header-height: 80px;
     --max-width: 1280px;
     --border-radius: 0.75rem;
-    /* 12px */
 
     /* Efectos */
     --shadow-soft: 0 4px 6px -1px rgba(37, 99, 235, 0.1), 0 2px 4px -1px rgba(37, 99, 235, 0.06);
@@ -32,25 +31,17 @@
 
     /* Tipografía - Tamaños (Escala Modular) */
     --text-xs: 0.75rem;
-    /* 12px - Notas al pie, etiquetas pequeñas, detalles legales */
     --text-sm: 0.875rem;
-    /* 14px - Fechas, metadatos, textos secundarios */
     --text-base: 1rem;
-    /* 16px - Texto principal (Párrafos), enlaces del menú */
     --text-lg: 1.125rem;
-    /* 18px - Intros, destacados, subtítulos pequeños (h5, h6) */
     --text-xl: 1.25rem;
-    /* 20px - Títulos de tarjetas, secciones menores (h4) */
     --text-2xl: 1.5rem;
-    /* 24px - Títulos de sección estándar (h3) */
     --text-3xl: 2rem;
-    /* 32px - Títulos principales de página (h2) */
     --text-4xl: 2.5rem;
-    /* 40px - Títulos Hero o Portada (h1) */
 }
 
 /* =========================================
-   Reset Básico (Normalización)
+   Reset Básico
    ========================================= */
 * {
     margin: 0;
@@ -63,13 +54,12 @@
    ========================================= */
 body {
     font-family: var(--font-body);
-    background-color: var(--bg-body);
-    color: var(--text-main);
+    background-color: var(--color-light);
+    color: var(--color-text);
     line-height: 1.6;
     font-size: var(--text-base);
 }
 
-/* Encabezados */
 h1,
 h2,
 h3,
@@ -80,7 +70,7 @@ h6 {
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 0.5em;
-    color: var(--primary-red);
+    color: var(--color-dark);
 }
 
 h1 {
@@ -99,154 +89,23 @@ h4 {
     font-size: var(--text-xl);
 }
 
-/* Imágenes responsivas */
 img {
     max-width: 100%;
     height: auto;
     display: block;
 }
 
-/* Enlaces sin decoración por defecto */
 a {
     text-decoration: none;
-    color: var(--accent-blue);
+    color: var(--color-primary);
 }
 
-/* Listas sin viñetas por defecto */
 ul {
     list-style: none;
 }
 
 /* =========================================
-   Utilidades de Tipografía (Para Pruebas)
-   ========================================= */
-.font-heading {
-    font-family: var(--font-heading);
-}
-
-.font-body {
-    font-family: var(--font-body);
-}
-
-.fw-300 {
-    font-weight: 300;
-    /* Paleta de Colores */
-    --color-primary: #2563EB;
-    /* Azul vibrante */
-    --color-primary-hover: #1d4ed8;
-    --color-dark: #0F172A;
-    /* Azul noche */
-    --color-light: #F8FAFC;
-    /* Fondo claro */
-    --color-text: #475569;
-    /* Texto gris */
-    --color-white: #ffffff;
-    --color-border: #e2e8f0;
-
-    /* Espaciado y Dimensiones */
-    --header-height: 80px;
-    --max-width: 1280px;
-    --border-radius: 0.75rem;
-    /* 12px */
-
-    /* Efectos */
-    --shadow-soft: 0 4px 6px -1px rgba(37, 99, 235, 0.1), 0 2px 4px -1px rgba(37, 99, 235, 0.06);
-    --shadow-header: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    --transition-speed: 0.3s;
-
-    /* Tipografía - Familias */
-    --font-heading: 'Montserrat', sans-serif;
-    --font-body: 'Open Sans', sans-serif;
-
-    /* Tipografía - Tamaños (Escala Modular) */
-    --text-xs: 0.75rem;
-    /* 12px - Notas al pie, etiquetas pequeñas, detalles legales */
-    --text-sm: 0.875rem;
-    /* 14px - Fechas, metadatos, textos secundarios */
-    --text-base: 1rem;
-    /* 16px - Texto principal (Párrafos), enlaces del menú */
-    --text-lg: 1.125rem;
-    /* 18px - Intros, destacados, subtítulos pequeños (h5, h6) */
-    --text-xl: 1.25rem;
-    /* 20px - Títulos de tarjetas, secciones menores (h4) */
-    --text-2xl: 1.5rem;
-    /* 24px - Títulos de sección estándar (h3) */
-    --text-3xl: 2rem;
-    /* 32px - Títulos principales de página (h2) */
-    --text-4xl: 2.5rem;
-    /* 40px - Títulos Hero o Portada (h1) */
-}
-
-/* =========================================
-   Reset Básico (Normalización)
-   ========================================= */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* =========================================
-   Estilos Base
-   ========================================= */
-body {
-    font-family: var(--font-body);
-    background-color: var(--bg-body);
-    color: var(--text-main);
-    line-height: 1.6;
-    font-size: var(--text-base);
-}
-
-/* Encabezados */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: var(--font-heading);
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 0.5em;
-    color: var(--primary-red);
-}
-
-h1 {
-    font-size: var(--text-4xl);
-}
-
-h2 {
-    font-size: var(--text-3xl);
-}
-
-h3 {
-    font-size: var(--text-2xl);
-}
-
-h4 {
-    font-size: var(--text-xl);
-}
-
-/* Imágenes responsivas */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Enlaces sin decoración por defecto */
-a {
-    text-decoration: none;
-    color: var(--accent-blue);
-}
-
-/* Listas sin viñetas por defecto */
-ul {
-    list-style: none;
-}
-
-/* =========================================
-   Utilidades de Tipografía (Para Pruebas)
+   Utilidades de Tipografía
    ========================================= */
 .font-heading {
     font-family: var(--font-heading);
@@ -319,364 +178,9 @@ ul {
     color: var(--color-primary);
 }
 
-/* Navegación - Mobile (Por defecto oculta o stack) */
+/* Navegación - Mobile */
 .nav__list {
     display: none;
-    /* Patrón Mobile: Oculto hasta activar menú (JS) o mostrar en Desktop */
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.nav__link {
-    font-family: var(--font-heading);
-    font-weight: 600;
-    font-size: var(--text-sm);
-    color: var(--color-text);
-
-}
-
-/* =========================================
-   Reset Básico (Normalización)
-   ========================================= */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* =========================================
-   Estilos Base
-   ========================================= */
-body {
-    font-family: var(--font-body);
-    background-color: var(--bg-body);
-    color: var(--text-main);
-    line-height: 1.6;
-    font-size: var(--text-base);
-}
-
-/* Encabezados */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: var(--font-heading);
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 0.5em;
-    color: var(--primary-red);
-}
-
-h1 {
-    font-size: var(--text-4xl);
-}
-
-h2 {
-    font-size: var(--text-3xl);
-}
-
-h3 {
-    font-size: var(--text-2xl);
-}
-
-h4 {
-    font-size: var(--text-xl);
-}
-
-/* Imágenes responsivas */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Enlaces sin decoración por defecto */
-a {
-    text-decoration: none;
-    color: var(--accent-blue);
-}
-
-/* Listas sin viñetas por defecto */
-ul {
-    list-style: none;
-}
-
-/* =========================================
-   Utilidades de Tipografía (Para Pruebas)
-   ========================================= */
-.font-heading {
-    font-family: var(--font-heading);
-}
-
-.font-body {
-    font-family: var(--font-body);
-}
-
-.fw-300 {
-    font-weight: 300;
-}
-
-.fw-400 {
-    font-weight: 400;
-}
-
-.fw-500 {
-    font-weight: 500;
-}
-
-.fw-600 {
-    font-weight: 600;
-}
-
-.fw-700 {
-    font-weight: 700;
-}
-
-.fw-800 {
-    font-weight: 800;
-}
-
-/* =========================================
-   Componente: Header (Mobile First)
-   ========================================= */
-.header {
-    background-color: var(--color-white);
-    height: var(--header-height);
-    box-shadow: var(--shadow-header);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
-}
-
-.header__container {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 0 1rem;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.header__logo {
-    font-family: var(--font-heading);
-    font-weight: 800;
-    font-size: var(--text-xl);
-    color: var(--color-primary);
-    text-transform: uppercase;
-    letter-spacing: -0.5px;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.header__logo-text {
-    color: var(--color-primary);
-}
-
-/* Navegación - Mobile (Por defecto oculta o stack) */
-.nav__list {
-    display: none;
-    /* Patrón Mobile: Oculto hasta activar menú (JS) o mostrar en Desktop */
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.nav__link {
-    font-family: var(--font-heading);
-    font-weight: 600;
-    font-size: var(--text-sm);
-    color: var(--color-text);
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.header__logo {
-    font-family: var(--font-heading);
-    font-weight: 800;
-    font-size: var(--text-xl);
-    color: var(--color-primary);
-    text-transform: uppercase;
-    letter-spacing: -0.5px;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.header__logo-text {
-    color: var(--color-primary);
-}
-
-/* Navegación - Mobile (Por defecto oculta o stack) */
-.nav__list {
-    display: none;
-    /* Patrón Mobile: Oculto hasta activar menú (JS) o mostrar en Desktop */
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.nav__link {
-    font-family: var(--font-heading);
-    font-weight: 600;
-    font-size: var(--text-sm);
-    color: var(--color-text);
-
-}
-
-/* =========================================
-   Reset Básico (Normalización)
-   ========================================= */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* =========================================
-   Estilos Base
-   ========================================= */
-body {
-    font-family: var(--font-body);
-    background-color: var(--bg-body);
-    color: var(--text-main);
-    line-height: 1.6;
-    font-size: var(--text-base);
-}
-
-/* Encabezados */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: var(--font-heading);
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 0.5em;
-    color: var(--primary-red);
-}
-
-h1 {
-    font-size: var(--text-4xl);
-}
-
-h2 {
-    font-size: var(--text-3xl);
-}
-
-h3 {
-    font-size: var(--text-2xl);
-}
-
-h4 {
-    font-size: var(--text-xl);
-}
-
-/* Imágenes responsivas */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Enlaces sin decoración por defecto */
-a {
-    text-decoration: none;
-    color: var(--accent-blue);
-}
-
-/* Listas sin viñetas por defecto */
-ul {
-    list-style: none;
-}
-
-/* =========================================
-   Utilidades de Tipografía (Para Pruebas)
-   ========================================= */
-.font-heading {
-    font-family: var(--font-heading);
-}
-
-.font-body {
-    font-family: var(--font-body);
-}
-
-.fw-300 {
-    font-weight: 300;
-}
-
-.fw-400 {
-    font-weight: 400;
-}
-
-.fw-500 {
-    font-weight: 500;
-}
-
-.fw-600 {
-    font-weight: 600;
-}
-
-.fw-700 {
-    font-weight: 700;
-}
-
-.fw-800 {
-    font-weight: 800;
-}
-
-/* =========================================
-   Componente: Header (Mobile First)
-   ========================================= */
-.header {
-    background-color: var(--color-white);
-    height: var(--header-height);
-    box-shadow: var(--shadow-header);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
-}
-
-.header__container {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 0 1rem;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.header__logo {
-    font-family: var(--font-heading);
-    font-weight: 800;
-    font-size: var(--text-xl);
-    color: var(--color-primary);
-    text-transform: uppercase;
-    letter-spacing: -0.5px;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.header__logo-text {
-    color: var(--color-primary);
-}
-
-/* Navegación - Mobile (Por defecto oculta o stack) */
-.nav__list {
-    display: none;
-    /* Patrón Mobile: Oculto hasta activar menú (JS) o mostrar en Desktop */
     list-style: none;
     margin: 0;
     padding: 0;
@@ -696,10 +200,9 @@ ul {
     color: var(--color-primary);
 }
 
-/* Botón Hamburguesa (Visible solo en móvil) */
+/* Botón Hamburguesa */
 .header__toggle {
     display: block;
-    /* Visible en móvil */
     background: none;
     border: none;
     cursor: pointer;
@@ -734,7 +237,6 @@ ul {
     top: 8px;
 }
 
-/* Animación del botón al estar activo */
 .header__toggle--active .header__toggle-icon {
     background-color: transparent;
 }
@@ -749,7 +251,7 @@ ul {
     top: 0;
 }
 
-/* Menú Desplegable en Móvil */
+/* Menú Desplegable Activo */
 .nav__list--active {
     display: flex;
     flex-direction: column;
