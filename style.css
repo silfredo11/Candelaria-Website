@@ -492,6 +492,201 @@ ul {
     font-weight: 600;
     font-size: var(--text-sm);
     color: var(--color-text);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: var(--text-xl);
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.header__logo-text {
+    color: var(--color-primary);
+}
+
+/* Navegación - Mobile (Por defecto oculta o stack) */
+.nav__list {
+    display: none;
+    /* Patrón Mobile: Oculto hasta activar menú (JS) o mostrar en Desktop */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__link {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: var(--text-sm);
+    color: var(--color-text);
+
+}
+
+/* =========================================
+   Reset Básico (Normalización)
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================================
+   Estilos Base
+   ========================================= */
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    line-height: 1.6;
+    font-size: var(--text-base);
+}
+
+/* Encabezados */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+    color: var(--primary-red);
+}
+
+h1 {
+    font-size: var(--text-4xl);
+}
+
+h2 {
+    font-size: var(--text-3xl);
+}
+
+h3 {
+    font-size: var(--text-2xl);
+}
+
+h4 {
+    font-size: var(--text-xl);
+}
+
+/* Imágenes responsivas */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Enlaces sin decoración por defecto */
+a {
+    text-decoration: none;
+    color: var(--accent-blue);
+}
+
+/* Listas sin viñetas por defecto */
+ul {
+    list-style: none;
+}
+
+/* =========================================
+   Utilidades de Tipografía (Para Pruebas)
+   ========================================= */
+.font-heading {
+    font-family: var(--font-heading);
+}
+
+.font-body {
+    font-family: var(--font-body);
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.fw-800 {
+    font-weight: 800;
+}
+
+/* =========================================
+   Componente: Header (Mobile First)
+   ========================================= */
+.header {
+    background-color: var(--color-white);
+    height: var(--header-height);
+    box-shadow: var(--shadow-header);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.header__container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: var(--text-xl);
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.header__logo-text {
+    color: var(--color-primary);
+}
+
+/* Navegación - Mobile (Por defecto oculta o stack) */
+.nav__list {
+    display: none;
+    /* Patrón Mobile: Oculto hasta activar menú (JS) o mostrar en Desktop */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__link {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: var(--text-sm);
+    color: var(--color-text);
     transition: color var(--transition-speed);
     padding: 0.5rem;
     display: block;
@@ -499,4 +694,82 @@ ul {
 
 .nav__link:hover {
     color: var(--color-primary);
+}
+
+/* Botón Hamburguesa (Visible solo en móvil) */
+.header__toggle {
+    display: block;
+    /* Visible en móvil */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.header__toggle-icon {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--color-primary);
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+.header__toggle-icon::before,
+.header__toggle-icon::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-primary);
+    left: 0;
+    transition: transform 0.3s;
+}
+
+.header__toggle-icon::before {
+    top: -8px;
+}
+
+.header__toggle-icon::after {
+    top: 8px;
+}
+
+/* Animación del botón al estar activo */
+.header__toggle--active .header__toggle-icon {
+    background-color: transparent;
+}
+
+.header__toggle--active .header__toggle-icon::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.header__toggle--active .header__toggle-icon::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+/* Menú Desplegable en Móvil */
+.nav__list--active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    background-color: var(--color-white);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+    z-index: 999;
+}
+
+.nav__list--active .nav__item {
+    width: 100%;
+    text-align: center;
+}
+
+.nav__list--active .nav__link {
+    padding: 1rem;
+    display: block;
+    border-bottom: 1px solid var(--color-border);
 }

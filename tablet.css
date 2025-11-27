@@ -3,6 +3,11 @@
    ========================================= */
 
 /* Header & Navegación */
+.header__toggle {
+    display: none;
+    /* Ocultar botón hamburguesa en tablet/PC */
+}
+
 .nav__list {
     display: flex;
     gap: 1.5rem;
