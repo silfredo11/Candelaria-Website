@@ -19,7 +19,4 @@
     padding: 0;
 }
 
-/* Carousel en Tablet */
-.hero-carousel {
-    height: 400px;
-}
+/* Carousel en Tablet: Hereda el comportamiento de mobile (calc 100vh - header) */

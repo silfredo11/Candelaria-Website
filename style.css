@@ -548,7 +548,8 @@ ul {
 .hero-carousel {
     position: relative;
     width: 100%;
-    height: 250px; /* Altura reducida para móviles */
+    /* Altura dinámica: 100% de la altura de la ventana menos la altura del header */
+    height: calc(100vh - var(--header-height));
     overflow: hidden;
     background-color: var(--color-dark);
 }
@@ -565,7 +566,9 @@ ul {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    /* 'contain' asegura que la imagen se vea completa sin cortarse */
+    object-fit: contain;
+    background-color: #000; /* Fondo negro para las barras laterales/superiores */
     opacity: 0;
     transition: opacity 1s ease-in-out;
     z-index: 1;
@@ -597,7 +600,11 @@ ul {
 
 @media (min-width: 1024px) {
     .hero-carousel {
-        height: 600px;
+        height: 600px; /* Restaurar altura fija en desktop */
+    }
+
+    .carousel__img {
+        object-fit: cover; /* En desktop usamos cover para que se vea "super bien" como le gusta al usuario */
     }
 }
 
