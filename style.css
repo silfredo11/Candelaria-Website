@@ -608,11 +608,9 @@ ul {
         object-fit: cover; /* En desktop usamos cover para que se vea "super bien" como le gusta al usuario */
     }
 
-    /* En Desktop, el título vuelve a estar abajo */
+    /* En Desktop, el título "Nuestros Eventos" DESAPARECE */
     .carousel__overlay {
-        top: auto;
-        bottom: 0;
-        background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+        display: none;
     }
 }
 
@@ -629,10 +627,11 @@ ul {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    align-items: center; /* Centrado horizontal del contenido en mobile */
 }
 
 .profile-card {
-    background-color: var(--color-white);
+    background-color: var(--color-primary); /* Color principal (Azul) */
     border-radius: var(--border-radius);
     padding: 1.5rem;
     display: flex;
@@ -641,17 +640,19 @@ ul {
     box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
     transition: transform var(--transition-speed), box-shadow var(--transition-speed);
     border: 1px solid transparent;
+    width: 100%;       /* Ocupar ancho disponible */
+    max-width: 450px;  /* Ancho máximo contenido (como el form) */
 }
 
 .profile-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-soft);
-    border-color: var(--color-border);
+    /* border-color: var(--color-border); Ya no es necesario con fondo azul */
 }
 
 .profile-card__icon-wrapper {
-    background-color: #eff6ff; /* Fondo azul muy claro */
-    color: var(--color-primary);
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo blanco semitransparente */
+    color: var(--color-white); /* Icono blanco */
     padding: 0.75rem;
     border-radius: 50%;
     display: flex;
@@ -666,24 +667,25 @@ ul {
 }
 
 .profile-card__title {
-    font-size: var(--text-base); /* Tamaño de fuente más contenido */
-    color: var(--color-dark);
+    font-size: var(--text-base); 
+    color: var(--color-white); /* Texto blanco */
     margin: 0;
     line-height: 1.2;
 }
 
 .profile-card__link-text {
     font-size: var(--text-xs);
-    color: var(--color-text);
+    color: rgba(255, 255, 255, 0.8); /* Texto blanco ligeramente apagado */
     margin-top: 0.25rem;
 }
 
 .profile-card__arrow {
-    color: var(--color-text);
-    transition: color 0.3s;
+    color: var(--color-white); /* Flecha blanca */
+    transition: transform 0.3s;
 }
 
 .profile-card:hover .profile-card__arrow {
-    color: var(--color-primary);
+    color: var(--color-white);
+    transform: translateX(4px); /* Animación sutil a la derecha */
 }
 
