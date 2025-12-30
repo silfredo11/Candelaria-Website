@@ -17,7 +17,7 @@
 .footer__container {
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: stretch;
     gap: 3rem;
 }
 
@@ -34,4 +34,15 @@
 .footer__section:not(:last-child) {
     border-right: 1px solid var(--color-border);
     padding-right: 2rem;
+}
+
+.footer__socials {
+    margin-top: 1.5rem;
+    /* Mayor espaciado en PC */
+}
+
+.footer__divider--socials {
+    display: block;
+    margin-top: 0.5rem;
+    border-color: var(--color-primary);
 }

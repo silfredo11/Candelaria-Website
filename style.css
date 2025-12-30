@@ -356,8 +356,8 @@ ul {
 .footer__brand-text-line {
   font-family: var(--font-heading);
   font-weight: 600;
-  font-size: var(--text-xs);
-  /* Texto más pequeño como solicitado */
+  font-size: 0.65rem;
+  /* Texto más pequeño y minimalista */
   color: var(--color-dark);
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -367,6 +367,10 @@ ul {
   font-size: var(--text-sm);
   color: var(--color-text);
   margin-top: 0.5rem;
+}
+
+.footer__socials {
+  margin-top: 1rem;
 }
 
 .footer__heading {
@@ -410,6 +414,10 @@ ul {
   border: none;
   border-top: 1px solid var(--color-border);
   width: 100%;
+}
+
+.footer__divider--socials {
+  display: none;
 }
 
 .footer__link-list {
