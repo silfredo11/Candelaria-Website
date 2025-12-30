@@ -46,3 +46,18 @@
     margin-top: 0.5rem;
     border-color: var(--color-primary);
 }
+
+/* Ajustes de Formulario para Desktop (Laptop) */
+.contact-section {
+    padding: 6rem 0; /* Un poco más de aire vertical */
+}
+
+.contact-form {
+    max-width: 500px; /* Ancho máximo restringido para que se vea pequeño en laptop */
+    margin: 0 auto;   /* Centrado */
+    padding: 3rem;    /* Padding interno más amplio */
+}
+
+.section__subtitle {
+    margin-bottom: 3rem;
+}

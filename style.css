@@ -454,3 +454,87 @@ ul {
   margin-left: auto;
   margin-right: auto;
 }
+
+/* =========================================
+   Componente: Secciones y Formularios
+   ========================================= */
+.section {
+  padding: 4rem 0;
+}
+
+.section__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.section__title {
+  font-size: var(--text-2xl);
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.section__subtitle {
+  font-size: var(--text-base);
+  color: var(--color-text);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Formulario de Contacto */
+.contact-form {
+  background-color: var(--color-white);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-label {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  color: var(--color-dark);
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  transition: border-color var(--transition-speed);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.btn-submit {
+  width: 100%;
+  margin-top: 1rem;
+  cursor: pointer;
+  border: none;
+}
