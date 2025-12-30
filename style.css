@@ -454,3 +454,88 @@ ul {
   margin-left: auto;
   margin-right: auto;
 }
+
+/* =========================================
+   Componente: Sección de Contacto (Mobile First)
+   ========================================= */
+.contact {
+  padding: 4rem 0;
+  background-color: var(--color-light);
+}
+
+.contact__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.contact__title {
+  text-align: center;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.contact__description {
+  text-align: center;
+  color: var(--color-text);
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact__form {
+  background-color: var(--color-white);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-soft);
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact__form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact__label {
+  font-weight: 600;
+  color: var(--color-dark);
+  font-size: var(--text-sm);
+}
+
+.contact__input,
+.contact__textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--color-dark);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact__input:focus,
+.contact__textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.contact__textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact__submit {
+  width: 100%;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  border: none;
+  font-size: var(--text-base);
+}

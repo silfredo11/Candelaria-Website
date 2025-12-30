@@ -46,3 +46,10 @@
     margin-top: 0.5rem;
     border-color: var(--color-primary);
 }
+
+/* =========================================
+   Sección de Contacto (Desktop)
+   ========================================= */
+.contact {
+    padding: 6rem 0;
+}
