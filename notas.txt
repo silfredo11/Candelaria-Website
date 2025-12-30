@@ -1,0 +1,10 @@
+Tareas pendientes por realizar:
+
+- Poner a funcionar el formulario de contacto: Se debe buscar el proveedor de correo, para cuando
+se envie el formulario, llegue a un correo, determinado.
+
+Los links del nav, ponerlos a funcionar 
+
+Los links de las redes sociales, ponerlos a funcionar
+
+
