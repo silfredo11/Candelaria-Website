@@ -533,8 +533,10 @@ ul {
 }
 
 .contact__submit {
-  width: 100%;
-  margin-top: 0.5rem;
+  width: auto;
+  min-width: 200px;
+  align-self: center;
+  margin-top: 1rem;
   cursor: pointer;
   border: none;
   font-size: var(--text-base);
