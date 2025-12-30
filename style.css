@@ -347,11 +347,20 @@ ul {
   object-fit: cover;
 }
 
-.footer__brand-text {
+.footer__brand-text-container {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.footer__brand-text-line {
   font-family: var(--font-heading);
   font-weight: 600;
-  font-size: var(--text-sm);
+  font-size: var(--text-xs);
+  /* Texto más pequeño como solicitado */
   color: var(--color-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .footer__description {
@@ -380,13 +389,21 @@ ul {
 }
 
 .footer__social-link {
-  font-size: var(--text-sm);
   color: var(--color-primary);
-  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, color 0.2s;
 }
 
 .footer__social-link:hover {
-  text-decoration: underline;
+  color: var(--color-primary-hover);
+  transform: translateY(-2px);
+}
+
+.footer__social-link svg {
+  width: 24px;
+  height: 24px;
 }
 
 .footer__divider {
