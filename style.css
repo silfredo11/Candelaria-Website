@@ -637,7 +637,8 @@ ul {
     display: flex;
     align-items: center;
     gap: 1rem;
-    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    /* Sombra más pronunciada y visible */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.15);
     transition: transform var(--transition-speed), box-shadow var(--transition-speed);
     border: 1px solid transparent;
     width: 100%;       /* Ocupar ancho disponible */
@@ -646,7 +647,8 @@ ul {
 
 .profile-card:hover {
     transform: translateY(-5px);
-    box-shadow: var(--shadow-soft);
+    /* Sombra aún más fuerte al hacer hover */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.35), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
     /* border-color: var(--color-border); Ya no es necesario con fondo azul */
 }
 
