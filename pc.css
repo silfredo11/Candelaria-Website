@@ -51,5 +51,15 @@
    Sección de Contacto (Desktop)
    ========================================= */
 .contact {
-    padding: 6rem 0;
+    padding: 4rem 0; /* Reducido de 6rem a 4rem el padding externo */
+}
+
+.contact__form {
+    max-width: 450px; /* Ancho muy contenido */
+    padding: 2rem;    /* Padding interno reducido */
+    margin: 0 auto;
+}
+
+.contact__description {
+    margin-bottom: 2rem;
 }
