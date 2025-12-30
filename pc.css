@@ -63,3 +63,17 @@
 .contact__description {
     margin-bottom: 2rem;
 }
+
+/* =========================================
+   Componente: Perfiles (Desktop)
+   ========================================= */
+.profiles__container {
+    flex-direction: row; /* En fila */
+    justify-content: center;
+    gap: 2rem;
+}
+
+.profile-card {
+    flex: 1; /* Ocupan el mismo ancho */
+    max-width: 350px;
+}
