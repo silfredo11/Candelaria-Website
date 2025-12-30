@@ -582,11 +582,12 @@ ul {
 /* Opcional: Overlay oscuro y título */
 .carousel__overlay {
     position: absolute;
-    bottom: 0;
+    top: 0;           /* Cambiado de bottom: 0 a top: 0 */
     left: 0;
     width: 100%;
     padding: 2rem;
-    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    /* Gradiente invertido: de arriba (negro opaco) a abajo (transparente) */
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7), transparent);
     z-index: 3;
     pointer-events: none;
 }
@@ -605,6 +606,13 @@ ul {
 
     .carousel__img {
         object-fit: cover; /* En desktop usamos cover para que se vea "super bien" como le gusta al usuario */
+    }
+
+    /* En Desktop, el título vuelve a estar abajo */
+    .carousel__overlay {
+        top: auto;
+        bottom: 0;
+        background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
     }
 }
 
