@@ -92,7 +92,36 @@
     </header>
 
     <main>
-        <!-- Contenido principal -->
+        <!-- Carousel Section -->
+        <section class="hero-carousel">
+            <div class="carousel__inner" id="carouselTrack">
+                <!-- Javascript will populate images here, or we can hardcode them for critical rendering path -->
+                <!-- Concurso De Canto Images -->
+                <img src="https://i.postimg.cc/tTcDgNPy/Concurso-de-canto-1.jpg" alt="Concurso de Canto 1" class="carousel__img active">
+                <img src="https://i.postimg.cc/yd3pcG71/Concurso-de-canto-2.jpg" alt="Concurso de Canto 2" class="carousel__img">
+                <img src="https://i.postimg.cc/YjdzJNtY/Concurso-de-canto-3.jpg" alt="Concurso de Canto 3" class="carousel__img">
+                <img src="https://i.postimg.cc/FfbjG3P0/Concurso-de-canto-4.jpg" alt="Concurso de Canto 4" class="carousel__img">
+                <img src="https://i.postimg.cc/fkRxj3YY/Concurso-de-canto-5.jpg" alt="Concurso de Canto 5" class="carousel__img">
+                <img src="https://i.postimg.cc/f3sd3kwM/Concurso-de-canto-6.jpg" alt="Concurso de Canto 6" class="carousel__img">
+                <img src="https://i.postimg.cc/TL75H9nn/Concurso-de-canto-7.jpg" alt="Concurso de Canto 7" class="carousel__img">
+                <img src="https://i.postimg.cc/GHsTqvtj/Concurso-de-canto-8.jpg" alt="Concurso de Canto 8" class="carousel__img">
+                <img src="https://i.postimg.cc/wtF17V49/Concurso-de-canto-9.jpg" alt="Concurso de Canto 9" class="carousel__img">
+                <img src="https://i.postimg.cc/gjNhJY1J/Concurso-de-canto.jpg"   alt="Concurso de Canto Final" class="carousel__img">
+                
+                <!-- Banda Institucional Images -->
+                <img src="https://i.postimg.cc/vHhgLHqV/Banda-Institucional.jpg"   alt="Banda Institucional 1" class="carousel__img">
+                <img src="https://i.postimg.cc/XvdnLsjB/Banda-Institucional-2.jpg" alt="Banda Institucional 2" class="carousel__img">
+                <img src="https://i.postimg.cc/dtfvKbDX/Banda-Institucional-3.jpg" alt="Banda Institucional 3" class="carousel__img">
+                <img src="https://i.postimg.cc/T1w8z067/Banda-institucional-4.jpg" alt="Banda Institucional 4" class="carousel__img">
+                <img src="https://i.postimg.cc/sXjbWmvP/Banda-Institucional-5.jpg" alt="Banda Institucional 5" class="carousel__img">
+                <img src="https://i.postimg.cc/7LDRv91J/Banda-institucional-6.jpg" alt="Banda Institucional 6" class="carousel__img">
+            </div>
+            
+            <div class="carousel__overlay">
+                <h2 class="carousel__title">Nuestros Eventos</h2>
+            </div>
+        </section>
+
         <!-- Sección de Contacto -->
         <section class="contact">
             <div class="contact__container">
@@ -233,6 +262,28 @@
             navList.classList.toggle('nav__list--active');
             navToggle.classList.toggle('header__toggle--active');
         });
+
+        /* Script Carousel */
+        const imgs = document.querySelectorAll('.carousel__img');
+        let currentImg = 0;
+        const totalImgs = imgs.length;
+
+        function showImage(index) {
+            imgs.forEach((img, i) => {
+                img.classList.remove('active');
+                if (i === index) {
+                    img.classList.add('active');
+                }
+            });
+        }
+
+        function nextImage() {
+            currentImg = (currentImg + 1) % totalImgs;
+            showImage(currentImg);
+        }
+
+        // Change image every 4 seconds
+        setInterval(nextImage, 4000);
     </script>
 </body>
 
