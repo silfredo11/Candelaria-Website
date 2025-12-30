@@ -459,7 +459,7 @@ ul {
    Componente: Sección de Contacto (Mobile First)
    ========================================= */
 .contact {
-  padding: 4rem 0;
+  padding: 0 0 4rem 0;
   background-color: var(--color-light);
 }
 
@@ -620,7 +620,7 @@ ul {
    ========================================= */
 .profiles {
     background-color: var(--color-light);
-    padding: 3rem 0; /* Padding vertical separado del carousel */
+    padding: 6rem 0; /* Padding aumentado para dar aire */
 }
 
 .profiles__container {
