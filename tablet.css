@@ -18,3 +18,8 @@
     font-size: var(--text-sm);
     padding: 0;
 }
+
+/* Carousel en Tablet */
+.hero-carousel {
+    height: 400px;
+}
