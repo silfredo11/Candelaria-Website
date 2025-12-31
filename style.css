@@ -701,9 +701,15 @@ ul {
 .top-bar {
     background-color: var(--color-secondary);
     color: var(--color-white);
-    font-size: var(--text-xs);
-    padding: 0.5rem 0;
+    font-size: 13px; /* Punto medio entre xs (12px) y sm (14px) */
+    padding: 1rem 0;
     width: 100%;
+}
+
+.top-bar svg {
+    width: 16px;
+    height: 16px;
+    /* Ajuste intermedio de iconos */
 }
 
 .top-bar__container {
