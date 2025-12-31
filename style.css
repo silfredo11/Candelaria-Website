@@ -464,7 +464,7 @@ ul {
    Componente: Sección de Contacto (Mobile First)
    ========================================= */
 .contact {
-  padding: 0 0 4rem 0;
+  padding: 4rem 0 4rem 0;
   background-color: var(--color-light);
 }
 
