@@ -435,13 +435,20 @@ ul {
 .footer__link {
   color: rgba(255, 255, 255, 0.8);
   font-size: var(--text-sm);
-  margin-bottom: 1rem; /* Aumentado espaciado entre items */
+  margin-bottom: 0rem; /* Aumentado espaciado entre items */
   display: flex;
 }
 
 .footer__link:hover {
   color: var(--color-white);
   text-decoration: underline;
+}
+
+.footer__contact-title {
+  font-weight: 600;
+  font-size: var(--text-base); /* Un poco más grande */
+  color: var(--color-white);
+  margin-bottom: 1.5rem; /* Separación solicitada */
 }
 
 .footer__contact-item {
