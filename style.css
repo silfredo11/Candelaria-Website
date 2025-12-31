@@ -803,6 +803,8 @@ ul {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); /* Sombra sutil */
     transition: transform 0.3s, box-shadow 0.3s;
     border: 1px solid rgba(0,0,0,0.02);
+    text-decoration: none; /* Asegurar que no haya subrayado */
+    color: inherit; /* Heredar color para consistencia */
 }
 
 .spec-card:hover {
