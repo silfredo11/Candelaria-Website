@@ -14,10 +14,12 @@
   /* Fondo claro (Slate 50) */
   --color-pastel: #eef2ff;
   /* Azul Pastel muy suave (Indigo 50) */
+  /* Azul Pastel muy suave (Indigo 50) */
   --color-text: #334155;
   /* Texto gris oscuro (Slate 700) - Mayor contraste y elegancia */
   --color-white: #ffffff;
   --color-border: #cbd5e1; /* Borde más definido (Slate 300) */
+  --color-gold: #fbbf24; /* Dorado elegante (Amber 400) para contraste */
 
   /* Espaciado y Dimensiones */
   --header-height: 80px;
@@ -433,6 +435,8 @@ ul {
 .footer__link {
   color: rgba(255, 255, 255, 0.8);
   font-size: var(--text-sm);
+  margin-bottom: 1rem; /* Aumentado espaciado entre items */
+  display: flex;
 }
 
 .footer__link:hover {
@@ -441,11 +445,17 @@ ul {
 }
 
 .footer__contact-item {
-  font-size: var(--text-sm);
   color: rgba(255, 255, 255, 0.8);
+  font-size: var(--text-sm);
+  margin-bottom: 1.2rem; /* Separación aumentada */
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+.footer__contact-item svg {
+  color: var(--color-gold); /* Iconos dorados */
+  flex-shrink: 0;
 }
 
 .footer__copyright {
@@ -711,7 +721,7 @@ ul {
 .top-bar svg {
     width: 16px;
     height: 16px;
-    /* Ajuste intermedio de iconos */
+    color: var(--color-gold); /* Iconos en dorado */
 }
 
 .top-bar__container {
@@ -744,7 +754,7 @@ ul {
 }
 
 .top-bar__social-link {
-    color: var(--color-white);
+    color: var(--color-gold); /* Enlaces sociales en dorado */
     display: flex;
     align-items: center;
     justify-content: center;

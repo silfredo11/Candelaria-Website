@@ -47,6 +47,10 @@
     border-color: rgba(255, 255, 255, 0.2); /* Línea blanca sutil */
 }
 
+.footer__contact-item {
+    justify-content: flex-start; /* Alinear a la izquierda en PC */
+}
+
 /* =========================================
    Sección de Contacto (Desktop)
    ========================================= */
