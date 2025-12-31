@@ -12,6 +12,8 @@
   /* Azul noche */
   --color-light: #f8fafc;
   /* Fondo claro (Slate 50) */
+  --color-pastel: #eef2ff;
+  /* Azul Pastel muy suave (Indigo 50) */
   --color-text: #334155;
   /* Texto gris oscuro (Slate 700) - Mayor contraste y elegancia */
   --color-white: #ffffff;
@@ -752,4 +754,70 @@ ul {
 
 .top-bar__social-link:hover {
     opacity: 1;
+}
+
+/* =========================================
+   Componente: Profundizaciones
+   ========================================= */
+.specializations {
+    background-color: var(--color-pastel);
+    padding: 6rem 0;
+}
+
+.specializations__container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.specializations__title {
+    color: var(--color-secondary);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.specializations__description {
+    text-align: center;
+    color: var(--color-text);
+    margin-bottom: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.specializations__grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile: 1 columna */
+    gap: 1.5rem;
+}
+
+.spec-card {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); /* Sombra sutil */
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid rgba(0,0,0,0.02);
+}
+
+.spec-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.spec-card__icon-wrapper {
+    color: var(--color-primary); /* Iconos en Azul Vibrante */
+    margin-bottom: 0.5rem;
+}
+
+.spec-card__title {
+    font-size: var(--text-lg);
+    font-weight: 600;
+    color: var(--color-secondary); /* Título en Azul Navy */
+    margin: 0;
 }

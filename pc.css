@@ -85,3 +85,11 @@
     flex-direction: row; /* En fila para desktop */
     justify-content: space-between;
 }
+
+/* =========================================
+   Componente: Profundizaciones (Desktop)
+   ========================================= */
+.specializations__grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    gap: 2rem;
+}
