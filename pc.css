@@ -32,7 +32,7 @@
 
 /* Opcional: Si se quiere una línea divisoria vertical entre secciones */
 .footer__section:not(:last-child) {
-    border-right: 1px solid var(--color-border);
+    border-right: 1px solid rgba(255, 255, 255, 0.2); /* Línea vertical blanca sutil */
     padding-right: 2rem;
 }
 
@@ -44,7 +44,7 @@
 .footer__divider--socials {
     display: block;
     margin-top: 0.5rem;
-    border-color: var(--color-primary);
+    border-color: rgba(255, 255, 255, 0.2); /* Línea blanca sutil */
 }
 
 /* =========================================

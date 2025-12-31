@@ -3,8 +3,10 @@
    ========================================= */
 :root {
   /* Paleta de Colores */
-  --color-primary: #292c75;
-  /* Azul vibrante */
+  --color-primary: #2563eb;
+  /* Azul vibrante (Acción) */
+  --color-secondary: #292c75;
+  /* Azul noche (Estructura) */
   --color-primary-hover: #1d4ed8;
   --color-dark: #0f172a;
   /* Azul noche */
@@ -71,7 +73,7 @@ h6 {
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 0.5em;
-  color: var(--color-dark);
+  color: var(--color-secondary);
 }
 
 h1 {
@@ -167,7 +169,7 @@ ul {
   font-family: var(--font-heading);
   font-weight: 800;
   font-size: var(--text-xl);
-  color: var(--color-primary);
+  color: var(--color-secondary); /* Logo Navy (Estructura) */
   text-transform: uppercase;
   letter-spacing: -0.5px;
   display: flex;
@@ -176,7 +178,7 @@ ul {
 }
 
 .header__logo-text {
-  color: var(--color-primary);
+  color: var(--color-secondary);
 }
 
 .header__logo-img {
@@ -313,8 +315,9 @@ ul {
    Componente: Footer (Mobile First)
    ========================================= */
 .footer {
-  background-color: var(--color-white);
-  border-top: 1px solid var(--color-border);
+  background-color: var(--color-secondary); /* Fondo Navy (Estructura) */
+  color: var(--color-white);
+  border-top: none;
   padding: 3rem 0;
   margin-top: auto;
 }
@@ -357,15 +360,14 @@ ul {
   font-family: var(--font-heading);
   font-weight: 600;
   font-size: 0.65rem;
-  /* Texto más pequeño y minimalista */
-  color: var(--color-dark);
+  color: var(--color-white); /* Texto blanco */
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
 .footer__description {
   font-size: var(--text-sm);
-  color: var(--color-text);
+  color: rgba(255, 255, 255, 0.8);
   margin-top: 0.5rem;
 }
 
@@ -375,7 +377,7 @@ ul {
 
 .footer__heading {
   font-size: var(--text-lg);
-  color: var(--color-dark);
+  color: var(--color-white);
   margin-bottom: 0.5rem;
 }
 
@@ -383,7 +385,7 @@ ul {
   font-weight: 600;
   font-size: var(--text-sm);
   margin-bottom: 0.5rem;
-  color: var(--color-dark);
+  color: var(--color-white);
 }
 
 .footer__social-links {
@@ -393,7 +395,7 @@ ul {
 }
 
 .footer__social-link {
-  color: var(--color-primary);
+  color: var(--color-white);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -412,7 +414,7 @@ ul {
 
 .footer__divider {
   border: none;
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid rgba(255, 255, 255, 0.2); /* Línea blanca sutil */
   width: 100%;
 }
 
@@ -427,17 +429,18 @@ ul {
 }
 
 .footer__link {
-  color: var(--color-text);
+  color: rgba(255, 255, 255, 0.8);
   font-size: var(--text-sm);
 }
 
 .footer__link:hover {
-  color: var(--color-primary);
+  color: var(--color-white);
+  text-decoration: underline;
 }
 
 .footer__contact-item {
   font-size: var(--text-sm);
-  color: var(--color-text);
+  color: rgba(255, 255, 255, 0.8);
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -449,7 +452,7 @@ ul {
   padding-top: 1.5rem;
   border-top: 1px solid var(--color-border);
   font-size: var(--text-xs);
-  color: var(--color-text);
+  color: rgba(255, 255, 255, 0.6); /* Color claro pero discreto */
   width: 90%;
   margin-left: auto;
   margin-right: auto;
@@ -471,7 +474,7 @@ ul {
 
 .contact__title {
   text-align: center;
-  color: var(--color-primary);
+  color: var(--color-secondary);
   margin-bottom: 1rem;
 }
 
@@ -631,7 +634,7 @@ ul {
 }
 
 .profile-card {
-    background-color: var(--color-primary); /* Color principal (Azul) */
+    background-color: var(--color-secondary); /* Color Azul Navy (Institucional) */
     border-radius: var(--border-radius);
     padding: 1.5rem;
     display: flex;
