@@ -694,3 +694,56 @@ ul {
     transform: translateX(4px); /* Animación sutil a la derecha */
 }
 
+
+/* =========================================
+   Componente: Top Bar (Barra Superior)
+   ========================================= */
+.top-bar {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    font-size: var(--text-xs);
+    padding: 0.5rem 0;
+    width: 100%;
+}
+
+.top-bar__container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column; /* Mobile: columna centrado */
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.top-bar__contact {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.top-bar__item {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.top-bar__socials {
+    display: flex;
+    gap: 1rem;
+}
+
+.top-bar__social-link {
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+    transition: opacity var(--transition-speed);
+}
+
+.top-bar__social-link:hover {
+    opacity: 1;
+}

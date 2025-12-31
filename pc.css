@@ -77,3 +77,11 @@
     flex: 1; /* Ocupan el mismo ancho */
     max-width: 350px;
 }
+
+/* =========================================
+   Componente: Top Bar (Desktop)
+   ========================================= */
+.top-bar__container {
+    flex-direction: row; /* En fila para desktop */
+    justify-content: space-between;
+}
