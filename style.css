@@ -11,11 +11,11 @@
   --color-dark: #0f172a;
   /* Azul noche */
   --color-light: #f8fafc;
-  /* Fondo claro */
-  --color-text: #475569;
-  /* Texto gris */
+  /* Fondo claro (Slate 50) */
+  --color-text: #334155;
+  /* Texto gris oscuro (Slate 700) - Mayor contraste y elegancia */
   --color-white: #ffffff;
-  --color-border: #e2e8f0;
+  --color-border: #cbd5e1; /* Borde más definido (Slate 300) */
 
   /* Espaciado y Dimensiones */
   --header-height: 80px;
