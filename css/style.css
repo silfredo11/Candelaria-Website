@@ -214,6 +214,40 @@ ul {
   color: var(--color-primary);
 }
 
+/* Dropdown */
+.nav__item {
+  position: relative;
+}
+
+.nav__submenu {
+  display: none;
+  list-style: none;
+  padding-left: 1rem; /* Indent for mobile */
+  background-color: #f8fafc; /* Slightly different bg for mobile nested */
+}
+
+.nav__submenu-item {
+  margin: 0;
+}
+
+.nav__submenu-link {
+  display: block;
+  padding: 0.5rem;
+  font-size: 0.9em;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.nav__submenu-link:hover {
+  color: var(--color-primary);
+}
+
+/* Show submenu on hover/focus-within */
+.nav__item:hover .nav__submenu,
+.nav__item:focus-within .nav__submenu {
+  display: block;
+}
+
 /* Botón Hamburguesa */
 .header__toggle {
   display: block;
@@ -568,275 +602,283 @@ ul {
    Componente: Carousel (Hero)
    ========================================= */
 .hero-carousel {
-    position: relative;
-    width: 100%;
-    /* Altura dinámica: 100% de la altura de la ventana menos la altura del header */
-    height: calc(100vh - var(--header-height));
-    overflow: hidden;
-    background-color: var(--color-dark);
+  position: relative;
+  width: 100%;
+  /* Altura dinámica: 100% de la altura de la ventana menos la altura del header */
+  height: calc(100vh - var(--header-height));
+  overflow: hidden;
+  background-color: var(--color-dark);
 }
 
 .carousel__inner {
-    width: 100%;
-    height: 100%;
-    position: relative;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 .carousel__img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* 'contain' asegura que la imagen se vea completa sin cortarse */
-    object-fit: contain;
-    background-color: #000; /* Fondo negro para las barras laterales/superiores */
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-    z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* 'contain' asegura que la imagen se vea completa sin cortarse */
+  object-fit: contain;
+  background-color: #000; /* Fondo negro para las barras laterales/superiores */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 1;
 }
 
 .carousel__img.active {
-    opacity: 1;
-    z-index: 2;
+  opacity: 1;
+  z-index: 2;
 }
 
 /* Opcional: Overlay oscuro y título */
 .carousel__overlay {
-    position: absolute;
-    top: 0;           /* Cambiado de bottom: 0 a top: 0 */
-    left: 0;
-    width: 100%;
-    padding: 2rem;
-    /* Gradiente invertido: de arriba (negro opaco) a abajo (transparente) */
-    background: linear-gradient(to bottom, rgba(0,0,0,0.7), transparent);
-    z-index: 3;
-    pointer-events: none;
+  position: absolute;
+  top: 0; /* Cambiado de bottom: 0 a top: 0 */
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  /* Gradiente invertido: de arriba (negro opaco) a abajo (transparente) */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent);
+  z-index: 3;
+  pointer-events: none;
 }
 
 .carousel__title {
-    color: var(--color-white);
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-    text-align: center;
-    margin: 0;
+  color: var(--color-white);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  margin: 0;
 }
 
 @media (min-width: 1024px) {
-    .hero-carousel {
-        height: 600px; /* Restaurar altura fija en desktop */
-    }
+  .hero-carousel {
+    height: 600px; /* Restaurar altura fija en desktop */
+  }
 
-    .carousel__img {
-        object-fit: cover; /* En desktop usamos cover para que se vea "super bien" como le gusta al usuario */
-    }
+  .carousel__img {
+    object-fit: cover; /* En desktop usamos cover para que se vea "super bien" como le gusta al usuario */
+  }
 
-    /* En Desktop, el título "Nuestros Eventos" DESAPARECE */
-    .carousel__overlay {
-        display: none;
-    }
+  /* En Desktop, el título "Nuestros Eventos" DESAPARECE */
+  .carousel__overlay {
+    display: none;
+  }
 }
-
 
 /* =========================================
    Componente: Perfiles (Cards)
    ========================================= */
 .profiles {
-    background-color: var(--color-light);
-    padding: 6rem 0; /* Padding aumentado para dar aire */
+  background-color: var(--color-light);
+  padding: 6rem 0; /* Padding aumentado para dar aire */
 }
 
 .profiles__container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    align-items: center; /* Centrado horizontal del contenido en mobile */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center; /* Centrado horizontal del contenido en mobile */
 }
 
 .profile-card {
-    background-color: var(--color-secondary); /* Color Azul Navy (Institucional) */
-    border-radius: var(--border-radius);
-    padding: 1.5rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    /* Sombra más pronunciada y visible */
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.15);
-    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-    border: 1px solid transparent;
-    width: 100%;       /* Ocupar ancho disponible */
-    max-width: 450px;  /* Ancho máximo contenido (como el form) */
+  background-color: var(
+    --color-secondary
+  ); /* Color Azul Navy (Institucional) */
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  /* Sombra más pronunciada y visible */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3),
+    0 4px 6px -2px rgba(0, 0, 0, 0.15);
+  transition: transform var(--transition-speed),
+    box-shadow var(--transition-speed);
+  border: 1px solid transparent;
+  width: 100%; /* Ocupar ancho disponible */
+  max-width: 450px; /* Ancho máximo contenido (como el form) */
 }
 
 .profile-card:hover {
-    transform: translateY(-5px);
-    /* Sombra aún más fuerte al hacer hover */
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.35), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
-    /* border-color: var(--color-border); Ya no es necesario con fondo azul */
+  transform: translateY(-5px);
+  /* Sombra aún más fuerte al hacer hover */
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.35),
+    0 10px 10px -5px rgba(0, 0, 0, 0.2);
+  /* border-color: var(--color-border); Ya no es necesario con fondo azul */
 }
 
 .profile-card__icon-wrapper {
-    background-color: rgba(255, 255, 255, 0.2); /* Fondo blanco semitransparente */
-    color: var(--color-white); /* Icono blanco */
-    padding: 0.75rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* Fondo blanco semitransparente */
+  color: var(--color-white); /* Icono blanco */
+  padding: 0.75rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .profile-card__content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .profile-card__title {
-    font-size: var(--text-base); 
-    color: var(--color-white); /* Texto blanco */
-    margin: 0;
-    line-height: 1.2;
+  font-size: var(--text-base);
+  color: var(--color-white); /* Texto blanco */
+  margin: 0;
+  line-height: 1.2;
 }
 
 .profile-card__link-text {
-    font-size: var(--text-xs);
-    color: rgba(255, 255, 255, 0.8); /* Texto blanco ligeramente apagado */
-    margin-top: 0.25rem;
+  font-size: var(--text-xs);
+  color: rgba(255, 255, 255, 0.8); /* Texto blanco ligeramente apagado */
+  margin-top: 0.25rem;
 }
 
 .profile-card__arrow {
-    color: var(--color-white); /* Flecha blanca */
-    transition: transform 0.3s;
+  color: var(--color-white); /* Flecha blanca */
+  transition: transform 0.3s;
 }
 
 .profile-card:hover .profile-card__arrow {
-    color: var(--color-white);
-    transform: translateX(4px); /* Animación sutil a la derecha */
+  color: var(--color-white);
+  transform: translateX(4px); /* Animación sutil a la derecha */
 }
-
 
 /* =========================================
    Componente: Top Bar (Barra Superior)
    ========================================= */
 .top-bar {
-    background-color: var(--color-secondary);
-    color: var(--color-white);
-    font-size: 13px; /* Punto medio entre xs (12px) y sm (14px) */
-    padding: 1rem 0;
-    width: 100%;
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  font-size: 13px; /* Punto medio entre xs (12px) y sm (14px) */
+  padding: 1rem 0;
+  width: 100%;
 }
 
 .top-bar svg {
-    width: 16px;
-    height: 16px;
-    color: var(--color-gold); /* Iconos en dorado */
+  width: 16px;
+  height: 16px;
+  color: var(--color-gold); /* Iconos en dorado */
 }
 
 .top-bar__container {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 0 1rem;
-    display: flex;
-    flex-direction: column; /* Mobile: columna centrado */
-    align-items: center;
-    gap: 0.5rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column; /* Mobile: columna centrado */
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .top-bar__contact {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .top-bar__item {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
 }
 
 .top-bar__socials {
-    display: flex;
-    gap: 1rem;
+  display: flex;
+  gap: 1rem;
 }
 
 .top-bar__social-link {
-    color: var(--color-gold); /* Enlaces sociales en dorado */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0.8;
-    transition: opacity var(--transition-speed);
+  color: var(--color-gold); /* Enlaces sociales en dorado */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  transition: opacity var(--transition-speed);
 }
 
 .top-bar__social-link:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 /* =========================================
    Componente: Profundizaciones
    ========================================= */
 .specializations {
-    background-color: var(--color-pastel);
-    padding: 6rem 0;
+  background-color: var(--color-pastel);
+  padding: 6rem 0;
 }
 
 .specializations__container {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 0 1rem;
-    text-align: center;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center;
 }
 
 .specializations__title {
-    color: var(--color-secondary);
-    text-align: center;
-    margin-bottom: 1rem;
+  color: var(--color-secondary);
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 .specializations__description {
-    text-align: center;
-    color: var(--color-text);
-    margin-bottom: 3rem;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+  text-align: center;
+  color: var(--color-text);
+  margin-bottom: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .specializations__grid {
-    display: grid;
-    grid-template-columns: 1fr; /* Mobile: 1 columna */
-    gap: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr; /* Mobile: 1 columna */
+  gap: 1.5rem;
 }
 
 .spec-card {
-    background-color: var(--color-white);
-    border-radius: var(--border-radius);
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); /* Sombra sutil */
-    transition: transform 0.3s, box-shadow 0.3s;
-    border: 1px solid rgba(0,0,0,0.02);
-    text-decoration: none; /* Asegurar que no haya subrayado */
-    color: inherit; /* Heredar color para consistencia */
+  background-color: var(--color-white);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); /* Sombra sutil */
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid rgba(0, 0, 0, 0.02);
+  text-decoration: none; /* Asegurar que no haya subrayado */
+  color: inherit; /* Heredar color para consistencia */
 }
 
 .spec-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 .spec-card__icon-wrapper {
-    color: var(--color-primary); /* Iconos en Azul Vibrante */
-    margin-bottom: 0.5rem;
+  color: var(--color-primary); /* Iconos en Azul Vibrante */
+  margin-bottom: 0.5rem;
 }
 
 .spec-card__title {
-    font-size: var(--text-lg);
-    font-weight: 600;
-    color: var(--color-secondary); /* Título en Azul Navy */
-    margin: 0;
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-secondary); /* Título en Azul Navy */
+  margin: 0;
 }
