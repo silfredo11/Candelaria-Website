@@ -441,6 +441,25 @@ function showResults() {
                 </div>
             </div>
 
+            <!-- Recursos de Estudio -->
+            <div class="quiz__resources">
+                <h3 class="quiz__resources-title">📚 Recursos de Estudio Recomendados</h3>
+                <div class="quiz__resources-grid">
+                    <a href="https://es.khanacademy.org/science/biology/ecology" target="_blank" class="quiz__resource-link">
+                        <span class="quiz__resource-icon">📖</span>
+                        <span class="quiz__resource-text">Khan Academy: Ecología</span>
+                    </a>
+                    <a href="https://www.youtube.com/results?search_query=flujo+de+energia+ecosistemas" target="_blank" class="quiz__resource-link">
+                        <span class="quiz__resource-icon">🎥</span>
+                        <span class="quiz__resource-text">Video: Flujo de Energía</span>
+                    </a>
+                    <a href="https://www.youtube.com/results?search_query=cadenas+troficas+explicacion" target="_blank" class="quiz__resource-link">
+                        <span class="quiz__resource-icon">🎥</span>
+                        <span class="quiz__resource-text">Video: Cadenas Tróficas</span>
+                    </a>
+                </div>
+            </div>
+
             <button class="quiz__btn-start" onclick="showStartScreen()">Intentar de nuevo</button>
         </div>
     `;
