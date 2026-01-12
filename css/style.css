@@ -1253,7 +1253,7 @@ ul {
     color: #b91c1c;
 }
 
-.quiz__btn-next {
+.quiz__btn-next, .quiz__btn-start {
     background-color: var(--color-primary);
     color: white;
     border: none;
@@ -1289,4 +1289,19 @@ ul {
     color: var(--color-secondary);
     margin-bottom: 2rem;
     font-size: var(--text-4xl);
+}
+
+/* =========================================
+   Componente: Section General (BEM)
+   ========================================= */
+.section {
+    padding: 4rem 0;
+    width: 100%;
+}
+
+.section__container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1rem; /* Padding lateral para evitar que pegue a los bordes */
+    width: 100%;
 }

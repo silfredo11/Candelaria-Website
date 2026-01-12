@@ -40,8 +40,12 @@ function showStartScreen() {
     container.innerHTML = `
         <div class="quiz__start">
             <h2 class="quiz__title">Quiz de Ciencias Naturales</h2>
-            <p class="quiz__description">Pon a prueba tus conocimientos con estas 5 preguntas.</p>
-            <button class="btn-cta" onclick="startQuiz()">Comenzar Quiz</button>
+            <p class="quiz__description">
+                Practica con las 5 preguntas tipo ICFES de la semana.
+                <br>
+                Prepárate en compañía de tus profesores para las pruebas ICFES.
+            </p>
+            <button class="quiz__btn-start" onclick="startQuiz()">Comenzar Quiz</button>
         </div>
     `;
     currentQuestion = 0;
