@@ -10,7 +10,8 @@ const questions = [
             "El ecosistema colapsará inmediatamente y todas las especies morirán.",
             "La población de insectos disminuirá rápidamente."
         ],
-        correct: 3 // D
+        correct: 3, // D
+        explanation: "Al aumentar los depredadores de los insectos (las ranas), la presión de depredación sobre los insectos será mayor, reduciendo su número."
     },
     {
         question: "Un estudiante desea separar una mezcla heterogénea compuesta por agua, sal disuelta y arena. Para recuperar los tres componentes por separado (agua líquida, sal sólida y arena seca), ¿cuál es la secuencia de métodos más adecuada?",
@@ -20,7 +21,8 @@ const questions = [
             "Filtración y luego destilación.",
             "Filtración y luego decantación."
         ],
-        correct: 2 // C
+        correct: 2, // C
+        explanation: "La filtración separa la arena (sólido insoluble) del agua salada. Luego, la destilación separa el agua (que se evapora y condensa) de la sal (que queda como residuo)."
     },
     {
         question: "Se lanza una pelota verticalmente hacia arriba. Despreciando la resistencia del aire, ¿cuál de las siguientes afirmaciones describe correctamente la velocidad y la aceleración de la pelota en el punto más alto de su trayectoria?",
@@ -30,7 +32,8 @@ const questions = [
             "La velocidad es cero y la aceleración es cero.",
             "La velocidad es máxima y la aceleración es constante."
         ],
-        correct: 0 // A
+        correct: 0, // A
+        explanation: "En el punto más alto, la velocidad es instantáneamente cero, pero la aceleración de la gravedad sigue actuando hacia abajo (diferente de cero)."
     },
     {
         question: "Los glóbulos rojos son células que transportan oxígeno en la sangre. Si se coloca una muestra de glóbulos rojos humanos en un vaso con agua destilada (sin sales), se observa que los glóbulos se hinchan y finalmente estallan. Este fenómeno ocurre porque:",
@@ -40,7 +43,8 @@ const questions = [
             "El agua destilada es una solución hipertónica, por lo que el agua sale de la célula por ósmosis.",
             "Los glóbulos rojos absorben oxígeno del agua destilada mediante transporte activo."
         ],
-        correct: 1 // B (Corrected based on biological fact and internal consistency of explanation in notas.txt, even if key said C. Explanation text matches B exactly.)
+        correct: 1, // B
+        explanation: "El agua destilada es una solución hipotónica (menor concentración de solutos que la célula), por lo que el agua entra a los glóbulos rojos por ósmosis tratando de equilibrar las concentraciones, causándoles hinchazón."
     },
     {
         question: "En un recipiente cerrado con un émbolo móvil, se tiene un gas ideal a una temperatura y presión constantes. Si se calienta el gas manteniendo la presión constante (el émbolo puede moverse libremente), ¿qué sucederá con el volumen del gas?",
@@ -50,7 +54,8 @@ const questions = [
             "El volumen disminuirá.",
             "El volumen se estabilizará en un valor intermedio."
         ],
-        correct: 1 // B
+        correct: 1, // B
+        explanation: "Según la Ley de Charles, a presión constante, el volumen de un gas ideal es directamente proporcional a su temperatura absoluta. Si la temperatura aumenta, el volumen aumenta."
     }
 ];
 
@@ -101,9 +106,11 @@ function loadQuestion() {
     let optionsHtml = '';
     questionData.options.forEach((option, index) => {
         optionsHtml += `
-            <button class="quiz__option" onclick="selectOption(${index})">
-                <span class="quiz__option-letter">${String.fromCharCode(65 + index)}.</span>
-                <span class="quiz__option-text">${option}</span>
+            <button class="quiz__option" id="option-${index}" onclick="selectOption(${index})">
+                <div class="quiz__option-content">
+                    <span class="quiz__option-letter">${String.fromCharCode(65 + index)}.</span>
+                    <span class="quiz__option-text">${option}</span>
+                </div>
             </button>
         `;
     });
@@ -138,25 +145,53 @@ function selectOption(index) {
     if (selectedOption !== null) return; // Prevent multiple clicks
 
     selectedOption = index;
-    const correctIndex = questions[currentQuestion].correct;
+    const questionData = questions[currentQuestion];
+    const correctIndex = questionData.correct;
     const options = document.querySelectorAll('.quiz__option');
     const feedback = document.getElementById('quiz-feedback');
     const successBadge = document.querySelector('.quiz__badge--success');
     const errorBadge = document.querySelector('.quiz__badge--error');
 
+    // Remove onclick handlers to freeze state
+    options.forEach(opt => opt.onclick = null);
+
+    const explanationHtml = `
+        <div class="quiz__explanation">
+            <div class="quiz__explanation-title">
+                ${index === correctIndex ? '✔ ¡Exacto!' : '❌ Incorrecto'}
+            </div>
+            <div class="quiz__explanation-text">
+                ${questionData.explanation}
+            </div>
+        </div>
+    `;
+
     if (index === correctIndex) {
         score++;
         if (successBadge) successBadge.innerHTML = `✔ ${score}`;
         options[index].classList.add('quiz__option--correct');
-        // Feedback shows next button aligned right
-        feedback.innerHTML = '<div class="quiz__footer"><button class="quiz__btn-next" onclick="nextQuestion()">Siguiente</button></div>';
+        // Inject explanation into the selected option
+        options[index].innerHTML += explanationHtml;
     } else {
         incorrectScore++;
         if (errorBadge) errorBadge.innerHTML = `✖ ${incorrectScore}`;
         options[index].classList.add('quiz__option--wrong');
         options[correctIndex].classList.add('quiz__option--correct');
-        feedback.innerHTML = '<div class="quiz__footer"><button class="quiz__btn-next" onclick="nextQuestion()">Siguiente</button></div>';
+        
+        // Show explanation in the correct option even if wrong was selected
+        // Or show it in the clicked one? screenshot shows correct one.
+        // Let's append to the correct option to show why it's the right answer.
+        options[correctIndex].innerHTML += `
+            <div class="quiz__explanation">
+                <div class="quiz__explanation-title">✔ La respuesta correcta es:</div>
+                <div class="quiz__explanation-text">
+                    ${questionData.explanation}
+                </div>
+            </div>
+        `;
     }
+
+    feedback.innerHTML = '<div class="quiz__footer"><button class="quiz__btn-next" onclick="nextQuestion()">Siguiente</button></div>';
 }
 
 function nextQuestion() {
