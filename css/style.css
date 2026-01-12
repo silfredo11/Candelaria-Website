@@ -1350,8 +1350,8 @@ ul {
 }
 
 .quiz__btn-start {
-    background-color: var(--color-gold);
-    color: var(--color-secondary);
+    background-color: var(--color-primary);
+    color: white; /* Changed to white for better contrast with primary blue */
     border: none;
     padding: 1rem 2rem;
     border-radius: 50px;
@@ -1364,27 +1364,78 @@ ul {
 }
 
 .quiz__btn-start:hover {
-    filter: brightness(1.1);
+    background-color: var(--color-primary-hover); /* Match hover of next button */
     transform: scale(1.05);
-}
-
-.quiz__score-display {
-    font-size: 4rem;
-    font-weight: 800;
-    color: var(--color-primary);
-    margin: 1rem 0;
-    text-align: center;
-}
-
-.quiz__score-message {
-    font-size: var(--text-xl);
-    margin-bottom: 2rem;
-    color: var(--color-secondary);
-    text-align: center;
 }
 
 .quiz__results {
     text-align: center;
+    width: 100%;
+}
+
+.quiz__results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+    width: 100%;
+}
+
+.quiz__result-card {
+    background-color: #f3f4f6;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+    min-height: 120px;
+}
+
+.quiz__result-label {
+    font-size: var(--text-base);
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 0.5rem;
+}
+
+.quiz__result-value {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--color-dark);
+    line-height: 1;
+}
+
+.quiz__result-value--primary {
+    color: var(--color-dark); 
+}
+
+/* Details Card */
+.quiz__result-card--details {
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.quiz__detail-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: var(--text-base);
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+.quiz__detail-val {
+    font-weight: 700;
+}
+
+.quiz__detail-val--green {
+    color: #15803d;
+}
+
+.quiz__detail-val--red {
+    color: #b91c1c;
 }
 
 /* =========================================

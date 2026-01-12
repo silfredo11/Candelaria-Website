@@ -207,18 +207,47 @@ function nextQuestion() {
 
 function showResults() {
     const container = document.getElementById('quiz-container');
-    const percentage = (score / questions.length) * 100;
-    let message = '';
+    const percentage = Math.round((score / questions.length) * 100);
     
-    if (percentage === 100) message = '¡Excelente trabajo!';
-    else if (percentage >= 60) message = '¡Bien hecho!';
-    else message = 'Sigue practicando';
+    // In this specific implementation, we don't have a 'skipped' mechanism 
+    // because the user must select an option to see the next button.
+    const skipped = 0; 
+    const wrong = incorrectScore;
 
     container.innerHTML = `
         <div class="quiz__results">
-            <h2>Resultados</h2>
-            <div class="quiz__score-display">${score} / ${questions.length}</div>
-            <p class="quiz__score-message">${message}</p>
+            <h2 class="quiz__title">¡Lo lograste! Quiz completado.</h2>
+            
+            <div class="quiz__results-grid">
+                <!-- Card 1: Puntaje -->
+                <div class="quiz__result-card">
+                    <div class="quiz__result-label">Puntaje</div>
+                    <div class="quiz__result-value quiz__result-value--primary">${score}/${questions.length}</div>
+                </div>
+
+                <!-- Card 2: Precisión -->
+                <div class="quiz__result-card">
+                    <div class="quiz__result-label">Precisión</div>
+                    <div class="quiz__result-value">${percentage}%</div>
+                </div>
+
+                <!-- Card 3: Detalles -->
+                <div class="quiz__result-card quiz__result-card--details">
+                    <div class="quiz__detail-row">
+                        <span>Correctas</span>
+                        <span class="quiz__detail-val quiz__detail-val--green">${score}</span>
+                    </div>
+                    <div class="quiz__detail-row">
+                        <span>Incorrectas</span>
+                        <span class="quiz__detail-val quiz__detail-val--red">${wrong}</span>
+                    </div>
+                    <div class="quiz__detail-row">
+                        <span>Omitidas</span>
+                        <span class="quiz__detail-val">${skipped}</span>
+                    </div>
+                </div>
+            </div>
+
             <button class="quiz__btn-start" onclick="showStartScreen()">Intentar de nuevo</button>
         </div>
     `;
