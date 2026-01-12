@@ -209,14 +209,31 @@ function showResults() {
     const container = document.getElementById('quiz-container');
     const percentage = Math.round((score / questions.length) * 100);
     
-    // In this specific implementation, we don't have a 'skipped' mechanism 
-    // because the user must select an option to see the next button.
     const skipped = 0; 
     const wrong = incorrectScore;
 
+    let title = '';
+    let message = '';
+    let titleClass = '';
+
+    if (score === questions.length) {
+        title = '¡Excelente trabajo!';
+        message = '¡Felicidades! Has contestado todo correctamente. Dominas este tema.';
+        titleClass = 'text-success'; // We might need to add this class or just use style
+    } else if (score >= 3) {
+        title = '¡Buen esfuerzo!';
+        message = 'Vas por buen camino, pero aún hay margen de mejora. ¡Sigue practicando!';
+        titleClass = 'text-warning';
+    } else {
+        title = '¡Sigue estudiando!';
+        message = 'Debes repasar tus conocimientos en Ciencias Naturales. ¡No te rindas!';
+        titleClass = 'text-danger';
+    }
+
     container.innerHTML = `
         <div class="quiz__results">
-            <h2 class="quiz__title">¡Lo lograste! Quiz completado.</h2>
+            <h2 class="quiz__title" style="margin-bottom: 0.5rem;">${title}</h2>
+            <p class="quiz__description" style="margin-bottom: 2rem;">${message}</p>
             
             <div class="quiz__results-grid">
                 <!-- Card 1: Puntaje -->
