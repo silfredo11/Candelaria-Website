@@ -175,6 +175,7 @@ function selectOption(index) {
         options[index].classList.add('quiz__option--correct', 'anim-success');
         options[index].innerHTML += explanationHtml;
         triggerConfetti(); // Fire confetti
+        playSound('success'); // Play sound
     } else {
         incorrectScore++;
         if (errorBadge) {
@@ -193,6 +194,7 @@ function selectOption(index) {
             </div>
         `;
         triggerSadAnim(); // Fire sad animation
+        playSound('error'); // Play sound
     }
 
     feedback.innerHTML = '<div class="quiz__footer"><button class="quiz__btn-next" onclick="nextQuestion()">Siguiente</button></div>';
@@ -206,6 +208,41 @@ function nextQuestion() {
         loadQuestion();
     } else {
         showResults();
+    }
+}
+
+// Sound Functions using Web Audio API
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+function playSound(type) {
+    if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+    }
+
+    const oscillator = audioCtx.createOscillator();
+    const gainNode = audioCtx.createGain();
+
+    oscillator.connect(gainNode);
+    gainNode.connect(audioCtx.destination);
+
+    if (type === 'success') {
+        // "Ding" sound (Sine wave, high pitch)
+        oscillator.type = 'sine';
+        oscillator.frequency.setValueAtTime(587.33, audioCtx.currentTime); // D5
+        oscillator.frequency.exponentialRampToValueAtTime(1174.66, audioCtx.currentTime + 0.1); // D6
+        gainNode.gain.setValueAtTime(0.1, audioCtx.currentTime);
+        gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.5);
+        oscillator.start();
+        oscillator.stop(audioCtx.currentTime + 0.5);
+    } else if (type === 'error') {
+        // "Buzz" sound (Sawtooth wave, low pitch)
+        oscillator.type = 'sawtooth';
+        oscillator.frequency.setValueAtTime(150, audioCtx.currentTime);
+        oscillator.frequency.exponentialRampToValueAtTime(100, audioCtx.currentTime + 0.2);
+        gainNode.gain.setValueAtTime(0.1, audioCtx.currentTime);
+        gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+        oscillator.start();
+        oscillator.stop(audioCtx.currentTime + 0.3);
     }
 }
 
