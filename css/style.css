@@ -255,6 +255,7 @@ ul {
   border: none;
   cursor: pointer;
   padding: 0.5rem;
+  padding-right: 0; /* Align icon with container edge (match logo) */
 }
 
 .header__toggle-icon {
@@ -300,6 +301,7 @@ ul {
 }
 
 /* Menú Desplegable Activo */
+/* Menú Desplegable Activo */
 .nav__list--active {
   display: flex;
   flex-direction: column;
@@ -324,9 +326,19 @@ ul {
   border-bottom: 1px solid var(--color-border);
 }
 
+/* Fix for CTA Button in Mobile Menu */
+.nav__list--active .nav__link.btn-cta {
+  display: inline-flex;
+  margin: 1rem auto; /* Center horizontally */
+  border-bottom: none;
+  width: auto; /* Ensure it fits content */
+}
+
+/* --- Estilos base del botón (btn-cta) --- */
 /* --- Estilos base del botón (btn-cta) --- */
 .btn-cta {
-  width: 140px;
+  width: auto; /* Cambiado de 140px fijo p/ evitar desbordamiento */
+  min-width: 140px;
   height: 34px;
   display: inline-flex;
   align-items: center;
