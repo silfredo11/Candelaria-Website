@@ -1333,6 +1333,30 @@ ul {
     width: 100%;
 }
 
+.quiz__start {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.quiz__topic-badge {
+    background-color: #e0e7ff; /* Indigo-100 */
+    color: var(--color-primary);
+    padding: 0.5rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    display: inline-block;
+    border: 1px solid #c7d2fe;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
 .quiz__btn-next {
     background-color: var(--color-primary);
     color: white;

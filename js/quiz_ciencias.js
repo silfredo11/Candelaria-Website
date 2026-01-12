@@ -3,59 +3,59 @@
    ========================================= */
 const questions = [
     {
-        question: "En un ecosistema de bosque, se observa que la población de serpientes ha disminuido drásticamente debido a la caza excesiva. Las serpientes en este ecosistema se alimentan principalmente de ranas, y las ranas se alimentan de insectos. Considerando las relaciones tróficas, ¿cuál es el efecto más probable a corto plazo en este ecosistema tras la disminución de las serpientes?",
+        question: "En una cadena alimentaria, se observa que la biomasa de los herbívoros (consumidores primarios) es siempre mayor que la de los carnívoros (consumidores secundarios). ¿Cuál es la razón termodinámica principal de este fenómeno?",
         options: [
-            "La población de ranas disminuirá por falta de competencia.",
-            "Los productores (plantas) aumentarán su biomasa.",
-            "El ecosistema colapsará inmediatamente y todas las especies morirán.",
-            "La población de insectos disminuirá rápidamente."
+            "Los carnívoros tienen tasas de reproducción más lentas que los herbívoros.",
+            "Solo se transfiere aproximadamente el 10% de la energía de un nivel trófico al siguiente.",
+            "Los herbívoros son más grandes físicamente que los carnívoros.",
+            "Las plantas producen menos energía de la que necesitan los carnívoros."
         ],
-        correct: 3, // D
-        explanation: "Al aumentar los depredadores de los insectos (las ranas), la presión de depredación sobre los insectos será mayor, reduciendo su número."
+        correct: 1, // B
+        explanation: "Debido a la segunda ley de la termodinámica, la energía se pierde como calor en cada transferencia. Solo alrededor del 10% de la energía se asimila en el siguiente nivel (Ley del 10%), lo que limita la biomasa de los niveles superiores."
     },
     {
-        question: "Un estudiante desea separar una mezcla heterogénea compuesta por agua, sal disuelta y arena. Para recuperar los tres componentes por separado (agua líquida, sal sólida y arena seca), ¿cuál es la secuencia de métodos más adecuada?",
+        question: "Las abejas obtienen néctar de las flores para alimentarse y, a cambio, transportan polen de una flor a otra, facilitando la reproducción de las plantas. ¿Qué tipo de relación interespecífica es esta?",
         options: [
-            "Evaporación y luego filtración.",
-            "Destilación y luego tamizado.",
-            "Filtración y luego destilación.",
-            "Filtración y luego decantación."
+            "Parasitismo: una especie se beneficia y la otra se perjudica.",
+            "Competencia: ambas especies luchan por el mismo recurso.",
+            "Mutualismo: ambas especies se benefician de la interacción.",
+            "Comensalismo: una se beneficia y a la otra le es indiferente."
         ],
         correct: 2, // C
-        explanation: "La filtración separa la arena (sólido insoluble) del agua salada. Luego, la destilación separa el agua (que se evapora y condensa) de la sal (que queda como residuo)."
+        explanation: "Es mutualismo porque ambas partes obtienen un beneficio vital: la abeja obtiene alimento y la planta logra reproducirse (polinización)."
     },
     {
-        question: "Se lanza una pelota verticalmente hacia arriba. Despreciando la resistencia del aire, ¿cuál de las siguientes afirmaciones describe correctamente la velocidad y la aceleración de la pelota en el punto más alto de su trayectoria?",
+        question: "En un lago contaminado con mercurio, se observa el fenómeno de biomagnificación. Si analizamos la concentración de mercurio en los tejidos de los organismos, ¿cuál de los siguientes tendrá la mayor concentración?",
         options: [
-            "La velocidad es cero y la aceleración es diferente de cero.",
-            "La velocidad es constante y la aceleración aumenta.",
-            "La velocidad es cero y la aceleración es cero.",
-            "La velocidad es máxima y la aceleración es constante."
+            "El fitoplancton (productores).",
+            "Los peces pequeños (herbívoros).",
+            "Las aves pescadoras (depredadores tope).",
+            "Las plantas acuáticas."
         ],
-        correct: 0, // A
-        explanation: "En el punto más alto, la velocidad es instantáneamente cero, pero la aceleración de la gravedad sigue actuando hacia abajo (diferente de cero)."
+        correct: 2, // C
+        explanation: "La biomagnificación hace que las toxinas persistentes se acumulen en mayor concentración a medida que se sube en la cadena trófica, afectando más a los depredadores tope."
     },
     {
-        question: "Los glóbulos rojos son células que transportan oxígeno en la sangre. Si se coloca una muestra de glóbulos rojos humanos en un vaso con agua destilada (sin sales), se observa que los glóbulos se hinchan y finalmente estallan. Este fenómeno ocurre porque:",
+        question: "La deforestación masiva de los bosques tropicales tiene un impacto directo en el ciclo del carbono. ¿Cuál es la consecuencia atmosférica inmediata más probable?",
         options: [
-            "Los glóbulos rojos absorben sales del agua destilada mediante transporte activo.",
-            "El agua destilada es una solución hipotónica, por lo que el agua entra a la célula por ósmosis.",
-            "El agua destilada es una solución hipertónica, por lo que el agua sale de la célula por ósmosis.",
-            "Los glóbulos rojos absorben oxígeno del agua destilada mediante transporte activo."
-        ],
-        correct: 1, // B
-        explanation: "El agua destilada es una solución hipotónica (menor concentración de solutos que la célula), por lo que el agua entra a los glóbulos rojos por ósmosis tratando de equilibrar las concentraciones, causándoles hinchazón."
-    },
-    {
-        question: "En un recipiente cerrado con un émbolo móvil, se tiene un gas ideal a una temperatura y presión constantes. Si se calienta el gas manteniendo la presión constante (el émbolo puede moverse libremente), ¿qué sucederá con el volumen del gas?",
-        options: [
-            "El volumen permanecerá igual.",
-            "El volumen aumentará.",
-            "El volumen disminuirá.",
-            "El volumen se estabilizará en un valor intermedio."
+            "Disminución del dióxido de carbono (CO2) porque hay menos árboles respirando.",
+            "Aumento del dióxido de carbono (CO2) porque hay menos árboles realizando fotosíntesis.",
+            "Aumento de los niveles de ozono estratosférico.",
+            "Enfriamiento global inmediato debido a la mayor reflexión de luz (albedo)."
         ],
         correct: 1, // B
-        explanation: "Según la Ley de Charles, a presión constante, el volumen de un gas ideal es directamente proporcional a su temperatura absoluta. Si la temperatura aumenta, el volumen aumenta."
+        explanation: "Los árboles actúan como sumideros de carbono absorbiendo CO2 durante la fotosíntesis. Al eliminarlos, ese CO2 deja de ser absorbido y se acumula en la atmósfera, contribuyendo al efecto invernadero."
+    },
+    {
+        question: "Cierta especie de insecto ha desarrollado resistencia a un pesticida que antes era mortal para ella. Desde el punto de vista evolutivo, ¿cómo se explica mejor este fenómeno?",
+        options: [
+            "El pesticida causó mutaciones genéticas específicas para salvar a los insectos.",
+            "Los insectos 'aprendieron' a evitar el pesticida y enseñaron a sus crías.",
+            "El sistema inmunológico de los insectos se fortaleció por el contacto repetido.",
+            "Selección natural: los individuos resistentes sobrevivieron y se reprodujeron, pasando el rasgo."
+        ],
+        correct: 3, // D
+        explanation: "No es que el individuo cambie a voluntad. Existía variabilidad genética; los que tenían genes de resistencia sobrevivieron a la aplicación, se reprodujeron y esa característica se volvió dominante en la población (Selección Natural)."
     }
 ];
 
@@ -71,6 +71,9 @@ function showStartScreen() {
     container.innerHTML = `
         <div class="quiz__start">
             <h2 class="quiz__title">Quiz de Ciencias Naturales</h2>
+            <div class="quiz__topic-badge">
+                Tema de la semana: Ecología y Flujo de Energía
+            </div>
             <p class="quiz__description">
                 Practica con las 5 preguntas tipo ICFES de la semana.
                 <br>
