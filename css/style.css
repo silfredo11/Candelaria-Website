@@ -1076,3 +1076,58 @@ ul {
     font-size: var(--text-xs);
     color: #94a3b8; /* Slate 400 */
 }
+
+/* =========================================
+   Featured Blog Card Styling
+   ========================================= */
+@media (min-width: 768px) {
+    .blogs__grid {
+        /* En tablet/desktop, el grid se adapta mejor */
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .blog-card--featured {
+        grid-column: span 2; /* Ocupa todo el ancho en tablet */
+        flex-direction: row; /* Diseño horizontal */
+        max-height: 400px; /* Limitar altura máxima */
+    }
+
+    .blog-card--featured .blog-card__image-wrapper {
+        width: 50%;
+        height: 100%; /* Llenar altura del contenedor padre */
+    }
+
+    .blog-card--featured .blog-card__content {
+        width: 50%;
+        justify-content: center; /* Centrar contenido verticalmente */
+        padding: 1.5rem; /* Reducir un poco el padding */
+    }
+
+    .blog-card--featured .blog-card__title {
+        font-size: var(--text-2xl); /* Título más grande */
+    }
+
+    .blog-card--featured .blog-card__excerpt {
+        font-size: var(--text-base); /* Texto más grande */
+        -webkit-line-clamp: 4; /* Mostrar más líneas */
+    }
+}
+
+@media (min-width: 1024px) {
+    .blogs__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .blog-card--featured {
+        grid-column: span 3; /* Ocupa todo el ancho en escritorio (3 columnas) */
+    }
+    
+    /* Ajustes adicionales para pantallas muy grandes sise desea */
+    .blog-card--featured .blog-card__image-wrapper {
+         width: 60%; /* Imagen un poco más ancha en desktop grande para impacto visual */
+    }
+    
+    .blog-card--featured .blog-card__content {
+        width: 40%;
+    }
+}
