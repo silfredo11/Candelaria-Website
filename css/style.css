@@ -1461,3 +1461,58 @@ ul {
     padding: 0 1rem; /* Padding lateral para evitar que pegue a los bordes */
     width: 100%;
 }
+
+/* --- Animations --- */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+@keyframes pop-success {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.anim-shake {
+    animation: shake 0.5s ease-in-out;
+}
+
+.anim-success {
+    animation: pop-success 0.3s ease-in-out;
+}
+
+/* Confetti */
+.quiz__confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background-color: #f00;
+    top: -10px;
+    z-index: 9999;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to { transform: translateY(100vh) rotate(720deg); }
+}
+
+/* Sad Emoji Overlay */
+.quiz__sad-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+    pointer-events: none;
+    animation: sad-fade 1.5s ease-out forwards;
+    z-index: 100;
+}
+
+@keyframes sad-fade {
+    0% { opacity: 0; transform: translate(-50%, -50%) scale(0.5); }
+    20% { opacity: 1; transform: translate(-50%, -50%) scale(1.2); }
+    80% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    100% { opacity: 0; transform: translate(-50%, -20%) scale(0.8); }
+}

@@ -168,19 +168,22 @@ function selectOption(index) {
 
     if (index === correctIndex) {
         score++;
-        if (successBadge) successBadge.innerHTML = `✔ ${score}`;
-        options[index].classList.add('quiz__option--correct');
-        // Inject explanation into the selected option
+        if (successBadge) {
+            successBadge.innerHTML = `✔ ${score}`;
+            successBadge.classList.add('anim-success');
+        }
+        options[index].classList.add('quiz__option--correct', 'anim-success');
         options[index].innerHTML += explanationHtml;
+        triggerConfetti(); // Fire confetti
     } else {
         incorrectScore++;
-        if (errorBadge) errorBadge.innerHTML = `✖ ${incorrectScore}`;
-        options[index].classList.add('quiz__option--wrong');
+        if (errorBadge) {
+            errorBadge.innerHTML = `✖ ${incorrectScore}`;
+            errorBadge.classList.add('anim-shake');
+        }
+        options[index].classList.add('quiz__option--wrong', 'anim-shake');
         options[correctIndex].classList.add('quiz__option--correct');
         
-        // Show explanation in the correct option even if wrong was selected
-        // Or show it in the clicked one? screenshot shows correct one.
-        // Let's append to the correct option to show why it's the right answer.
         options[correctIndex].innerHTML += `
             <div class="quiz__explanation">
                 <div class="quiz__explanation-title">✔ La respuesta correcta es:</div>
@@ -189,6 +192,7 @@ function selectOption(index) {
                 </div>
             </div>
         `;
+        triggerSadAnim(); // Fire sad animation
     }
 
     feedback.innerHTML = '<div class="quiz__footer"><button class="quiz__btn-next" onclick="nextQuestion()">Siguiente</button></div>';
@@ -203,6 +207,39 @@ function nextQuestion() {
     } else {
         showResults();
     }
+}
+
+// Animation Functions
+function triggerConfetti() {
+    const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
+    for (let i = 0; i < 50; i++) {
+        const confetti = document.createElement('div');
+        confetti.classList.add('quiz__confetti');
+        confetti.style.left = Math.random() * 100 + 'vw';
+        confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.animationDuration = (Math.random() * 2 + 1) + 's'; // 1-3s
+        confetti.style.opacity = Math.random();
+        document.body.appendChild(confetti);
+
+        // Remove after animation
+        setTimeout(() => {
+            confetti.remove();
+        }, 3000);
+    }
+}
+
+function triggerSadAnim() {
+    const container = document.getElementById('quiz-container');
+    const sadEmoji = document.createElement('div');
+    sadEmoji.classList.add('quiz__sad-overlay');
+    sadEmoji.textContent = '😢'; // Sad face
+    container.style.position = 'relative'; // Ensure relative positioning for absolute child
+    container.appendChild(sadEmoji);
+
+    // Remove after animation
+    setTimeout(() => {
+        sadEmoji.remove();
+    }, 1500);
 }
 
 function showResults() {
