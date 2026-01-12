@@ -133,11 +133,11 @@ function selectOption(index) {
     if (index === correctIndex) {
         score++;
         options[index].classList.add('quiz__option--correct');
-        feedback.innerHTML = '<span class="quiz__msg quiz__msg--success">¡Correcto!</span> <button class="btn-next" onclick="nextQuestion()">Siguiente</button>';
+        feedback.innerHTML = '<span class="quiz__msg quiz__msg--success">¡Correcto!</span> <button class="quiz__btn-next" onclick="nextQuestion()">Siguiente</button>';
     } else {
         options[index].classList.add('quiz__option--wrong');
         options[correctIndex].classList.add('quiz__option--correct');
-        feedback.innerHTML = '<span class="quiz__msg quiz__msg--error">Incorrecto</span> <button class="btn-next" onclick="nextQuestion()">Siguiente</button>';
+        feedback.innerHTML = '<span class="quiz__msg quiz__msg--error">Incorrecto</span> <button class="quiz__btn-next" onclick="nextQuestion()">Siguiente</button>';
     }
 }
 
