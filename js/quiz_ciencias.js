@@ -243,7 +243,61 @@ function playSound(type) {
         gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
         oscillator.start();
         oscillator.stop(audioCtx.currentTime + 0.3);
+    } else if (type === 'tick') {
+        // "Tick" sound (Woodblock style)
+        oscillator.type = 'sine';
+        oscillator.frequency.setValueAtTime(800, audioCtx.currentTime);
+        gainNode.gain.setValueAtTime(0.1, audioCtx.currentTime);
+        gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.1);
+        oscillator.start();
+        oscillator.stop(audioCtx.currentTime + 0.1);
+    } else if (type === 'start') {
+        // "Go!" sound (Ascending chord)
+        oscillator.type = 'triangle';
+        oscillator.frequency.setValueAtTime(523.25, audioCtx.currentTime); // C5
+        oscillator.frequency.linearRampToValueAtTime(1046.50, audioCtx.currentTime + 0.3); // C6
+        gainNode.gain.setValueAtTime(0.1, audioCtx.currentTime);
+        gainNode.gain.linearRampToValueAtTime(0.01, audioCtx.currentTime + 0.6);
+        oscillator.start();
+        oscillator.stop(audioCtx.currentTime + 0.6);
     }
+}
+
+// Countdown Function
+function startCountdown() {
+    const container = document.getElementById('quiz-container');
+    container.style.position = 'relative'; // Ensure positioning context
+    
+    // Create overlay
+    const overlay = document.createElement('div');
+    overlay.className = 'quiz__countdown';
+    container.appendChild(overlay);
+
+    let count = 3;
+
+    function tick() {
+        if (count > 0) {
+            overlay.innerHTML = `<span class="anim-pop-in">${count}</span>`;
+            playSound('tick');
+            setTimeout(() => {
+                count--;
+                tick();
+            }, 1000);
+        } else {
+            overlay.innerHTML = `<span class="anim-pop-in">¡Ya!</span>`;
+            playSound('start');
+            setTimeout(() => {
+                overlay.remove();
+                loadQuestion();
+            }, 1000);
+        }
+    }
+
+    tick();
+}
+
+function startQuiz() {
+    startCountdown();
 }
 
 // Animation Functions
