@@ -904,6 +904,9 @@ ul {
 }
 
 .blogs__container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
