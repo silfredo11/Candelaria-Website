@@ -10,6 +10,98 @@ Los links de las redes sociales, ponerlos a funcionar
 
 
 
+Preguntas Ciencias Naturales
+
+1) En un ecosistema de bosque, se observa que la población de serpientes ha disminuido drásticamente debido a la caza excesiva. Las serpientes en este ecosistema se alimentan principalmente de ranas, y las ranas se alimentan de insectos. Considerando las relaciones tróficas, ¿cuál es el efecto más probable a corto plazo en este ecosistema tras la disminución de las serpientes?
+
+
+Respuesta: 
+
+A.
+La población de ranas disminuirá por falta de competencia.
+
+B.
+Los productores (plantas) aumentarán su biomasa.
+
+C.
+El ecosistema colapsará inmediatamente y todas las especies morirán.
+
+D.
+La población de insectos disminuirá rápidamente.
+
+Respuesta correcta: D
+
+¡Exacto!
+Al aumentar los depredadores de los insectos (las ranas), la presión de depredación sobre los insectos será mayor, reduciendo su número.
+
+2) Un estudiante desea separar una mezcla heterogénea compuesta por agua, sal disuelta y arena. Para recuperar los tres componentes por separado (agua líquida, sal sólida y arena seca), ¿cuál es la secuencia de métodos más adecuada?
+
+Respuesta: 
+
+A.
+Evaporación y luego filtración.
+
+b. B.
+Destilación y luego tamizado.
+
+C. Filtración y luego destilación.
+
+D. Filtración y luego decantación.
+
+Respuesta correcta: C
+
+¡Exacto!
+La evaporación es un proceso que libera el agua del sistema, lo que deja la sal sólida. Posteriormente, la filtración permite obtener el agua líquida, y la destilación permite obtener el agua pura.
+
+3) 
+Se lanza una pelota verticalmente hacia arriba. Despreciando la resistencia del aire, ¿cuál de las siguientes afirmaciones describe correctamente la velocidad y la aceleración de la pelota en el punto más alto de su trayectoria?
+
+A.
+La velocidad es cero y la aceleración es diferente de cero.
+
+B.
+La velocidad es constante y la aceleración aumenta.
+
+C.
+La velocidad es cero y la aceleración es cero.
+
+D.
+La velocidad es máxima y la aceleración es constante.
+
+Respuesta correcta: A   
+
+¡Exacto!
+La velocidad es cero en el punto más alto de la trayectoria, y la aceleración es diferente de cero (debido a la gravedad).
+
+4) Los glóbulos rojos son células que transportan oxígeno en la sangre. Si se coloca una muestra de glóbulos rojos humanos en un vaso con agua destilada (sin sales), se observa que los glóbulos se hinchan y finalmente estallan. Este fenómeno ocurre porque:
+
+a. Los glóbulos rojos absorben sales del agua destilada mediante transporte activo.
+
+b. El agua destilada es una solución hipotónica, por lo que el agua entra a la célula por ósmosis.
+
+c. El agua destilada es una solución hipertónica, por lo que el agua sale de la célula por ósmosis.
+
+d. Los glóbulos rojos absorben oxígeno del agua destilada mediante transporte activo.
+
+Respuesta correcta: C
+
+¡Exacto!
+El agua destilada es una solución hipotónica, por lo que el agua entra a la célula por ósmosis.
+
+5) En un recipiente cerrado con un émbolo móvil, se tiene un gas ideal a una temperatura y presión constantes. Si se calienta el gas manteniendo la presión constante (el émbolo puede moverse libremente), ¿qué sucederá con el volumen del gas?
+
+A.  volumen permanecerá igual.
+
+B. El volumen aumentará.
+
+C. El volumen disminuirá.
+
+D. El volumen se estabilizará en un valor intermedio.
+
+Respuesta correcta: B
+
+¡Exacto!
+El volumen aumentará, ya que el gas se expandirá para equilibrar la presión constante.
 
 
 

@@ -1134,3 +1134,143 @@ ul {
         width: 40%;
     }
 }
+
+/* =========================================
+   Componente: Quiz Ciencias Naturales
+   ========================================= */
+#quiz-container {
+    background-color: var(--color-white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-soft);
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.quiz-title {
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+}
+
+.quiz-description, .quiz-question-text {
+    font-size: var(--text-lg);
+    color: var(--color-text);
+    margin-bottom: 2rem;
+}
+
+.quiz-question-text {
+    font-weight: 600;
+}
+
+.quiz-options {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .quiz-options {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.quiz-option {
+    background-color: var(--color-light);
+    border: 2px solid var(--color-border);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    cursor: pointer;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.2s ease;
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    color: var(--color-text);
+}
+
+.quiz-option:hover {
+    background-color: var(--color-pastel);
+    border-color: var(--color-primary);
+}
+
+.quiz-option.correct {
+    background-color: #dcfce7; /* Verde claro */
+    border-color: #22c55e; /* Verde éxito */
+    color: #15803d;
+}
+
+.quiz-option.wrong {
+    background-color: #fee2e2; /* Rojo claro */
+    border-color: #ef4444; /* Rojo error */
+    color: #b91c1c;
+}
+
+.option-letter {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.quiz-feedback {
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.success-msg {
+    color: #15803d;
+    font-weight: 700;
+    font-size: var(--text-lg);
+}
+
+.error-msg {
+    color: #b91c1c;
+    font-weight: 700;
+    font-size: var(--text-lg);
+}
+
+.btn-next {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: var(--text-base);
+    transition: background 0.2s;
+}
+
+.btn-next:hover {
+    background-color: var(--color-primary-hover);
+}
+
+.score-display {
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    margin: 1rem 0;
+}
+
+.score-message {
+    font-size: var(--text-xl);
+    margin-bottom: 2rem;
+    color: var(--color-secondary);
+}
