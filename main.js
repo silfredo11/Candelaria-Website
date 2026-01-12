@@ -82,9 +82,9 @@ function showStartScreen() {
     if (!container) return;
     
     container.innerHTML = `
-        <div class="quiz-start">
-            <h2 class="quiz-title">Quiz de Ciencias Naturales</h2>
-            <p class="quiz-description">Pon a prueba tus conocimientos con estas 5 preguntas.</p>
+        <div class="quiz__start">
+            <h2 class="quiz__title">Quiz de Ciencias Naturales</h2>
+            <p class="quiz__description">Pon a prueba tus conocimientos con estas 5 preguntas.</p>
             <button class="btn-cta" onclick="startQuiz()">Comenzar Quiz</button>
         </div>
     `;
@@ -103,21 +103,21 @@ function loadQuestion() {
     let optionsHtml = '';
     questionData.options.forEach((option, index) => {
         optionsHtml += `
-            <button class="quiz-option" onclick="selectOption(${index})">
-                <span class="option-letter">${String.fromCharCode(65 + index)}</span>
-                <span class="option-text">${option}</span>
+            <button class="quiz__option" onclick="selectOption(${index})">
+                <span class="quiz__option-letter">${String.fromCharCode(65 + index)}</span>
+                <span class="quiz__option-text">${option}</span>
             </button>
         `;
     });
 
     container.innerHTML = `
-        <div class="quiz-game">
-            <div class="quiz-progress">Pregunta ${currentQuestion + 1} de ${questions.length}</div>
-            <h3 class="quiz-question-text">${questionData.question}</h3>
-            <div class="quiz-options">
+        <div class="quiz__game">
+            <div class="quiz__progress">Pregunta ${currentQuestion + 1} de ${questions.length}</div>
+            <h3 class="quiz__question">${questionData.question}</h3>
+            <div class="quiz__options">
                 ${optionsHtml}
             </div>
-            <div id="quiz-feedback" class="quiz-feedback"></div>
+            <div id="quiz-feedback" class="quiz__feedback"></div>
         </div>
     `;
 }
@@ -127,17 +127,17 @@ function selectOption(index) {
 
     selectedOption = index;
     const correctIndex = questions[currentQuestion].correct;
-    const options = document.querySelectorAll('.quiz-option');
+    const options = document.querySelectorAll('.quiz__option');
     const feedback = document.getElementById('quiz-feedback');
 
     if (index === correctIndex) {
         score++;
-        options[index].classList.add('correct');
-        feedback.innerHTML = '<span class="success-msg">¡Correcto!</span> <button class="btn-next" onclick="nextQuestion()">Siguiente</button>';
+        options[index].classList.add('quiz__option--correct');
+        feedback.innerHTML = '<span class="quiz__msg quiz__msg--success">¡Correcto!</span> <button class="btn-next" onclick="nextQuestion()">Siguiente</button>';
     } else {
-        options[index].classList.add('wrong');
-        options[correctIndex].classList.add('correct');
-        feedback.innerHTML = '<span class="error-msg">Incorrecto</span> <button class="btn-next" onclick="nextQuestion()">Siguiente</button>';
+        options[index].classList.add('quiz__option--wrong');
+        options[correctIndex].classList.add('quiz__option--correct');
+        feedback.innerHTML = '<span class="quiz__msg quiz__msg--error">Incorrecto</span> <button class="btn-next" onclick="nextQuestion()">Siguiente</button>';
     }
 }
 
@@ -162,10 +162,10 @@ function showResults() {
     else message = 'Sigue practicando';
 
     container.innerHTML = `
-        <div class="quiz-results">
+        <div class="quiz__results">
             <h2>Resultados</h2>
-            <div class="score-display">${score} / ${questions.length}</div>
-            <p class="score-message">${message}</p>
+            <div class="quiz__score-display">${score} / ${questions.length}</div>
+            <p class="quiz__score-message">${message}</p>
             <button class="btn-cta" onclick="showStartScreen()">Intentar de nuevo</button>
         </div>
     `;

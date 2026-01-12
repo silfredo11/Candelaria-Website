@@ -1138,7 +1138,10 @@ ul {
 /* =========================================
    Componente: Quiz Ciencias Naturales
    ========================================= */
-#quiz-container {
+/* =========================================
+   Componente: Quiz Ciencias Naturales (BEM)
+   ========================================= */
+#quiz-container { 
     background-color: var(--color-white);
     padding: 2rem;
     border-radius: var(--border-radius);
@@ -1152,22 +1155,24 @@ ul {
     justify-content: center;
 }
 
-.quiz-title {
+.quiz__title {
     color: var(--color-secondary);
     margin-bottom: 1rem;
+    font-size: var(--text-2xl);
 }
 
-.quiz-description, .quiz-question-text {
+.quiz__description, 
+.quiz__question {
     font-size: var(--text-lg);
     color: var(--color-text);
     margin-bottom: 2rem;
 }
 
-.quiz-question-text {
+.quiz__question {
     font-weight: 600;
 }
 
-.quiz-options {
+.quiz__options {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
@@ -1175,12 +1180,12 @@ ul {
 }
 
 @media (min-width: 768px) {
-    .quiz-options {
+    .quiz__options {
         grid-template-columns: 1fr 1fr;
     }
 }
 
-.quiz-option {
+.quiz__option {
     background-color: var(--color-light);
     border: 2px solid var(--color-border);
     border-radius: var(--border-radius);
@@ -1194,26 +1199,27 @@ ul {
     font-family: var(--font-body);
     font-size: var(--text-base);
     color: var(--color-text);
+    width: 100%;
 }
 
-.quiz-option:hover {
+.quiz__option:hover {
     background-color: var(--color-pastel);
     border-color: var(--color-primary);
 }
 
-.quiz-option.correct {
+.quiz__option--correct {
     background-color: #dcfce7; /* Verde claro */
     border-color: #22c55e; /* Verde éxito */
     color: #15803d;
 }
 
-.quiz-option.wrong {
+.quiz__option--wrong {
     background-color: #fee2e2; /* Rojo claro */
     border-color: #ef4444; /* Rojo error */
     color: #b91c1c;
 }
 
-.option-letter {
+.quiz__option-letter {
     background-color: var(--color-secondary);
     color: var(--color-white);
     width: 30px;
@@ -1226,7 +1232,7 @@ ul {
     flex-shrink: 0;
 }
 
-.quiz-feedback {
+.quiz__feedback {
     min-height: 60px;
     display: flex;
     align-items: center;
@@ -1234,43 +1240,37 @@ ul {
     gap: 1rem;
 }
 
-.success-msg {
+.quiz__msg {
+    font-weight: 700;
+    font-size: var(--text-lg);
+}
+
+.quiz__msg--success {
     color: #15803d;
-    font-weight: 700;
-    font-size: var(--text-lg);
 }
 
-.error-msg {
+.quiz__msg--error {
     color: #b91c1c;
-    font-weight: 700;
-    font-size: var(--text-lg);
 }
 
-.btn-next {
-    background-color: var(--color-primary);
-    color: white;
-    border: none;
-    padding: 0.5rem 1.5rem;
-    border-radius: 50px;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: var(--text-base);
-    transition: background 0.2s;
-}
-
-.btn-next:hover {
-    background-color: var(--color-primary-hover);
-}
-
-.score-display {
+.quiz__score-display {
     font-size: 4rem;
     font-weight: 800;
     color: var(--color-primary);
     margin: 1rem 0;
 }
 
-.score-message {
+.quiz__score-message {
     font-size: var(--text-xl);
     margin-bottom: 2rem;
     color: var(--color-secondary);
+}
+
+/* =========================================
+   Componente: Section Title (BEM)
+   ========================================= */
+.section__title {
+    color: var(--color-secondary);
+    margin-bottom: 2rem;
+    font-size: var(--text-4xl);
 }
