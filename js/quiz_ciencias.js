@@ -260,6 +260,46 @@ function playSound(type) {
         gainNode.gain.linearRampToValueAtTime(0.01, audioCtx.currentTime + 0.6);
         oscillator.start();
         oscillator.stop(audioCtx.currentTime + 0.6);
+    } else if (type === 'victory') {
+        // Victory Fanfare (Major Arpeggio: C-E-G-C)
+        const notes = [523.25, 659.25, 783.99, 1046.50];
+        const times = [0, 0.15, 0.30, 0.60];
+        
+        notes.forEach((freq, i) => {
+            const osc = audioCtx.createOscillator();
+            const gn = audioCtx.createGain();
+            osc.connect(gn);
+            gn.connect(audioCtx.destination);
+            
+            osc.type = 'square';
+            osc.frequency.setValueAtTime(freq, audioCtx.currentTime + times[i]);
+            
+            gn.gain.setValueAtTime(0.05, audioCtx.currentTime + times[i]);
+            gn.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + times[i] + 0.3);
+            
+            osc.start(audioCtx.currentTime + times[i]);
+            osc.stop(audioCtx.currentTime + times[i] + 0.3);
+        });
+    } else if (type === 'defeat') {
+        // Defeat (Descending: G-F#-F)
+        const notes = [392.00, 369.99, 349.23];
+        const times = [0, 0.4, 0.8];
+        
+        notes.forEach((freq, i) => {
+            const osc = audioCtx.createOscillator();
+            const gn = audioCtx.createGain();
+            osc.connect(gn);
+            gn.connect(audioCtx.destination);
+            
+            osc.type = 'sawtooth';
+            osc.frequency.setValueAtTime(freq, audioCtx.currentTime + times[i]);
+            
+            gn.gain.setValueAtTime(0.05, audioCtx.currentTime + times[i]);
+            gn.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + times[i] + 0.6);
+            
+            osc.start(audioCtx.currentTime + times[i]);
+            osc.stop(audioCtx.currentTime + times[i] + 0.6);
+        });
     }
 }
 
@@ -347,15 +387,20 @@ function showResults() {
     if (score === questions.length) {
         title = '¡Excelente trabajo!';
         message = '¡Felicidades! Has contestado todo correctamente. Dominas este tema.';
-        titleClass = 'text-success'; // We might need to add this class or just use style
+        titleClass = 'text-success'; 
+        playSound('victory');
+        triggerConfetti();
     } else if (score >= 3) {
         title = '¡Buen esfuerzo!';
         message = 'Vas por buen camino, pero aún hay margen de mejora. ¡Sigue practicando!';
         titleClass = 'text-warning';
+        playSound('victory');
+        triggerConfetti();
     } else {
         title = '¡Sigue estudiando!';
         message = 'Debes repasar tus conocimientos en Ciencias Naturales. ¡No te rindas!';
         titleClass = 'text-danger';
+        playSound('defeat');
     }
 
     container.innerHTML = `
