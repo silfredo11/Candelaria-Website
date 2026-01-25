@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/tablet.css" media="(min-width: 768px)">
     <link rel="stylesheet" href="../css/pc.css" media="(min-width: 1024px)">
+    <link rel="stylesheet" href="../css/profile.css">
 </head>
 
 <body>
@@ -103,177 +104,253 @@
     </header>
 
     <main class="profiles">
-        <div class="profiles__container section__container">
+        <div class="profiles__container section__container profiles__container--vertical">
             <h1 style="text-align: center; margin-bottom: 0.5rem; color: var(--color-secondary);">Nuestros Docentes</h1>
             <p style="text-align: center; margin-bottom: 3rem; color: #475569;">Conoce al equipo de profesionales encargados de tu formación.</p>
             
-            <!-- Charith -->
-            <a href="charith.html" class="profile-card">
-                <div class="profile-card__icon-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                </div>
-                <div class="profile-card__content">
-                    <h3 class="profile-card__title">Charith</h3>
-                    <span class="profile-card__link-text">Ver Perfil</span>
-                </div>
-                <svg class="profile-card__arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
 
-            <!-- Claudia -->
-            <a href="claudia.html" class="profile-card">
-                <div class="profile-card__icon-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                </div>
-                <div class="profile-card__content">
-                    <h3 class="profile-card__title">Claudia</h3>
-                    <span class="profile-card__link-text">Ver Perfil</span>
-                </div>
-                <svg class="profile-card__arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
+            <!-- Categoria: Ciencias Naturales -->
+            <section class="teacher-category">
+                <h2 class="teacher-category__title">Ciencias Naturales</h2>
+                <div class="teachers-grid">
+                    
+                    <!-- Claudia -->
+                    <article class="teacher-card">
+                        <div class="teacher-card__img-wrapper">
+                            <img src="../img/profile-placeholder.png" alt="Claudia" class="teacher-card__img">
+                        </div>
+                        <div class="teacher-card__content">
+                            <h3 class="teacher-card__name">Claudia</h3>
+                            <p class="teacher-card__role">Docente de Ciencias Naturales</p>
+                            <p class="teacher-card__bio">Promoviendo la curiosidad científica y el amor por la naturaleza en nuestros estudiantes.</p>
+                            <a href="claudia_naturales.html" class="teacher-card__link">Ver Hoja de Vida</a>
+                        </div>
+                    </article>
 
-            <!-- Edilson -->
-            <a href="edilson.html" class="profile-card">
-                <div class="profile-card__icon-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                </div>
-                <div class="profile-card__content">
-                    <h3 class="profile-card__title">Edilson</h3>
-                    <span class="profile-card__link-text">Ver Perfil</span>
-                </div>
-                <svg class="profile-card__arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
+                    <!-- Jinet -->
+                    <article class="teacher-card">
+                        <div class="teacher-card__img-wrapper">
+                            <img src="../img/profile-placeholder.png" alt="Jinet" class="teacher-card__img">
+                        </div>
+                        <div class="teacher-card__content">
+                            <h3 class="teacher-card__name">Jinet</h3>
+                            <p class="teacher-card__role">Docente de Ciencias Naturales</p>
+                            <p class="teacher-card__bio">Comprometida con la enseñanza de las ciencias y el cuidado del medio ambiente.</p>
+                            <a href="jinet_naturales.html" class="teacher-card__link">Ver Hoja de Vida</a>
+                        </div>
+                    </article>
 
-            <!-- Jinet -->
-            <a href="jinet.html" class="profile-card">
-                <div class="profile-card__icon-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                </div>
-                <div class="profile-card__content">
-                    <h3 class="profile-card__title">Jinet</h3>
-                    <span class="profile-card__link-text">Ver Perfil</span>
-                </div>
-                <svg class="profile-card__arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
+                    <!-- Patricia -->
+                    <article class="teacher-card">
+                        <div class="teacher-card__img-wrapper">
+                            <img src="../img/profile-placeholder.png" alt="Patricia" class="teacher-card__img">
+                        </div>
+                        <div class="teacher-card__content">
+                            <h3 class="teacher-card__name">Patricia</h3>
+                            <p class="teacher-card__role">Docente de Ciencias Naturales</p>
+                            <p class="teacher-card__bio">Fomentando el pensamiento crítico y la investigación científica en el aula.</p>
+                            <a href="patricia_naturales.html" class="teacher-card__link">Ver Hoja de Vida</a>
+                        </div>
+                    </article>
 
-            <!-- Jose -->
-            <a href="jose.html" class="profile-card">
-                <div class="profile-card__icon-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
                 </div>
-                <div class="profile-card__content">
-                    <h3 class="profile-card__title">Jose</h3>
-                    <span class="profile-card__link-text">Ver Perfil</span>
-                </div>
-                <svg class="profile-card__arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
+            </section>
 
-            <!-- Julio Cesar -->
-            <a href="julio_cesar.html" class="profile-card">
-                <div class="profile-card__icon-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                </div>
-                <div class="profile-card__content">
-                    <h3 class="profile-card__title">Julio Cesar</h3>
-                    <span class="profile-card__link-text">Ver Perfil</span>
-                </div>
-                <svg class="profile-card__arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
+            <!-- Categoria: Humanidades y Lengua Castellana -->
+            <section class="teacher-category">
+                <h2 class="teacher-category__title">Humanidades y Lengua Castellana</h2>
+                <div class="teachers-grid">
+                    
+                    <!-- Charith -->
+                    <article class="teacher-card">
+                        <div class="teacher-card__img-wrapper">
+                            <img src="../img/profile-placeholder.png" alt="Charith" class="teacher-card__img">
+                        </div>
+                        <div class="teacher-card__content">
+                            <h3 class="teacher-card__name">Charith</h3>
+                            <p class="teacher-card__role">Docente de Español</p>
+                            <p class="teacher-card__bio">Inspirando a través de la lectura y la escritura creativa.</p>
+                            <a href="charith_español.html" class="teacher-card__link">Ver Hoja de Vida</a>
+                        </div>
+                    </article>
 
-            <!-- Leydi -->
-            <a href="leydi.html" class="profile-card">
-                <div class="profile-card__icon-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                </div>
-                <div class="profile-card__content">
-                    <h3 class="profile-card__title">Leydi</h3>
-                    <span class="profile-card__link-text">Ver Perfil</span>
-                </div>
-                <svg class="profile-card__arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
+                    <!-- Leydi -->
+                    <article class="teacher-card">
+                        <div class="teacher-card__img-wrapper">
+                            <img src="../img/profile-placeholder.png" alt="Leydi" class="teacher-card__img">
+                        </div>
+                        <div class="teacher-card__content">
+                            <h3 class="teacher-card__name">Leydi</h3>
+                            <p class="teacher-card__role">Docente de Español</p>
+                            <p class="teacher-card__bio">Pasión por la literatura y la comunicación efectiva.</p>
+                            <a href="leydi_español.html" class="teacher-card__link">Ver Hoja de Vida</a>
+                        </div>
+                    </article>
 
-            <!-- Maria -->
-            <a href="maria.html" class="profile-card">
-                <div class="profile-card__icon-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                </div>
-                <div class="profile-card__content">
-                    <h3 class="profile-card__title">Maria</h3>
-                    <span class="profile-card__link-text">Ver Perfil</span>
-                </div>
-                <svg class="profile-card__arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
+                    <!-- Maria -->
+                    <article class="teacher-card">
+                        <div class="teacher-card__img-wrapper">
+                            <img src="../img/profile-placeholder.png" alt="Maria" class="teacher-card__img">
+                        </div>
+                        <div class="teacher-card__content">
+                            <h3 class="teacher-card__name">Maria</h3>
+                            <p class="teacher-card__role">Docente de Español</p>
+                            <p class="teacher-card__bio">Desarrollando competencias comunicativas para el siglo XXI.</p>
+                            <a href="maria_español.html" class="teacher-card__link">Ver Hoja de Vida</a>
+                        </div>
+                    </article>
 
-            <!-- Mauricio -->
-            <a href="mauricio.html" class="profile-card">
-                <div class="profile-card__icon-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                </div>
-                <div class="profile-card__content">
-                    <h3 class="profile-card__title">Mauricio</h3>
-                    <span class="profile-card__link-text">Ver Perfil</span>
-                </div>
-                <svg class="profile-card__arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
+                    <!-- Nancy Roncancio -->
+                    <article class="teacher-card">
+                        <div class="teacher-card__img-wrapper">
+                            <img src="../img/profile-placeholder.png" alt="Nancy Roncancio" class="teacher-card__img">
+                        </div>
+                        <div class="teacher-card__content">
+                            <h3 class="teacher-card__name">Nancy Roncancio</h3>
+                            <p class="teacher-card__role">Docente de Español</p>
+                            <p class="teacher-card__bio">Enseñando el valor de las palabras y la expresión correcta.</p>
+                            <a href="nancy_roncancio_español.html" class="teacher-card__link">Ver Hoja de Vida</a>
+                        </div>
+                    </article>
 
-            <!-- Nancy Roncancio -->
-            <a href="nancy_roncancio.html" class="profile-card">
-                <div class="profile-card__icon-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                </div>
-                <div class="profile-card__content">
-                    <h3 class="profile-card__title">Nancy Roncancio</h3>
-                    <span class="profile-card__link-text">Ver Perfil</span>
-                </div>
-                <svg class="profile-card__arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
+                     <!-- Julio Cesar -->
+                     <article class="teacher-card">
+                        <div class="teacher-card__img-wrapper">
+                            <img src="../img/profile-placeholder.png" alt="Julio Cesar" class="teacher-card__img">
+                        </div>
+                        <div class="teacher-card__content">
+                            <h3 class="teacher-card__name">Julio Cesar</h3>
+                            <p class="teacher-card__role">Docente de Humanidades</p>
+                            <p class="teacher-card__bio">Explorando el conocimiento a través de las humanidades y el pensamiento social.</p>
+                            <a href="julio_cesar_humanidades.html" class="teacher-card__link">Ver Hoja de Vida</a>
+                        </div>
+                    </article>
 
-            <!-- Nidia -->
-            <a href="nidia.html" class="profile-card">
-                <div class="profile-card__icon-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                </div>
-                <div class="profile-card__content">
-                    <h3 class="profile-card__title">Nidia</h3>
-                    <span class="profile-card__link-text">Ver Perfil</span>
-                </div>
-                <svg class="profile-card__arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
+                    <!-- Mauricio -->
+                    <article class="teacher-card">
+                        <div class="teacher-card__img-wrapper">
+                            <img src="../img/profile-placeholder.png" alt="Mauricio" class="teacher-card__img">
+                        </div>
+                        <div class="teacher-card__content">
+                            <h3 class="teacher-card__name">Mauricio</h3>
+                            <p class="teacher-card__role">Docente de Humanidades</p>
+                            <p class="teacher-card__bio">Formando ciudadanos críticos y reflexivos.</p>
+                            <a href="mauricio_humanidades.html" class="teacher-card__link">Ver Hoja de Vida</a>
+                        </div>
+                    </article>
 
-            <!-- Nubia -->
-            <a href="nubia.html" class="profile-card">
-                <div class="profile-card__icon-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
                 </div>
-                <div class="profile-card__content">
-                    <h3 class="profile-card__title">Nubia</h3>
-                    <span class="profile-card__link-text">Ver Perfil</span>
-                </div>
-                <svg class="profile-card__arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
+            </section>
 
-            <!-- Patricia -->
-            <a href="patricia.html" class="profile-card">
-                <div class="profile-card__icon-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                </div>
-                <div class="profile-card__content">
-                    <h3 class="profile-card__title">Patricia</h3>
-                    <span class="profile-card__link-text">Ver Perfil</span>
-                </div>
-                <svg class="profile-card__arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
+             <!-- Categoria: Tecnología e Informática -->
+             <section class="teacher-category">
+                <h2 class="teacher-category__title">Tecnología e Informática</h2>
+                <div class="teachers-grid">
+                    
+                    <!-- Edilson -->
+                    <article class="teacher-card">
+                        <div class="teacher-card__img-wrapper">
+                            <img src="../img/profile-placeholder.png" alt="Edilson" class="teacher-card__img">
+                        </div>
+                        <div class="teacher-card__content">
+                            <h3 class="teacher-card__name">Edilson</h3>
+                            <p class="teacher-card__role">Docente de Tecnología</p>
+                            <p class="teacher-card__bio">Innovación y desarrollo tecnológico en el aula de clases.</p>
+                            <a href="edilson_informatica.html" class="teacher-card__link">Ver Hoja de Vida</a>
+                        </div>
+                    </article>
 
-            <!-- Rovinzon -->
-            <a href="rovinzon.html" class="profile-card">
-                <div class="profile-card__icon-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    <!-- Rovinzon -->
+                    <article class="teacher-card">
+                        <div class="teacher-card__img-wrapper">
+                            <img src="../img/profile-placeholder.png" alt="Rovinzon" class="teacher-card__img">
+                        </div>
+                        <div class="teacher-card__content">
+                            <h3 class="teacher-card__name">Rovinzon</h3>
+                            <p class="teacher-card__role">Docente de Informática</p>
+                            <p class="teacher-card__bio">Guiando a los estudiantes en el mundo digital y la programación.</p>
+                            <a href="rovinzon_informatica.html" class="teacher-card__link">Ver Hoja de Vida</a>
+                        </div>
+                    </article>
+
                 </div>
-                <div class="profile-card__content">
-                    <h3 class="profile-card__title">Rovinzon</h3>
-                    <span class="profile-card__link-text">Ver Perfil</span>
+            </section>
+
+            <!-- Categoria: Educación Física, Recreación y Deportes -->
+            <section class="teacher-category">
+                <h2 class="teacher-category__title">Educación Física, Recreación y Deportes</h2>
+                <div class="teachers-grid">
+                    
+                    <!-- Luenry -->
+                    <article class="teacher-card">
+                        <div class="teacher-card__img-wrapper">
+                            <img src="../img/profile-placeholder.png" alt="Luenry Mendoza" class="teacher-card__img">
+                        </div>
+                        <div class="teacher-card__content">
+                            <h3 class="teacher-card__name">Luenry Mendoza</h3>
+                            <p class="teacher-card__role">Docente de Educación Física</p>
+                            <p class="teacher-card__bio">Promoviendo la salud y el deporte como estilo de vida.</p>
+                            <a href="lu_educación_fisica.html" class="teacher-card__link">Ver Hoja de Vida</a>
+                        </div>
+                    </article>
+
                 </div>
-                <svg class="profile-card__arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
+            </section>
+
+             <!-- Categoria: Educación Artística -->
+             <section class="teacher-category">
+                <h2 class="teacher-category__title">Educación Artística</h2>
+                <div class="teachers-grid">
+                    
+                    <!-- Jose -->
+                    <article class="teacher-card">
+                        <div class="teacher-card__img-wrapper">
+                            <img src="../img/profile-placeholder.png" alt="Jose" class="teacher-card__img">
+                        </div>
+                        <div class="teacher-card__content">
+                            <h3 class="teacher-card__name">Jose</h3>
+                            <p class="teacher-card__role">Docente de Artística</p>
+                            <p class="teacher-card__bio">Fomentando la creatividad y la expresión artística.</p>
+                            <a href="jose_artistica.html" class="teacher-card__link">Ver Hoja de Vida</a>
+                        </div>
+                    </article>
+
+                    <!-- Nidia -->
+                    <article class="teacher-card">
+                        <div class="teacher-card__img-wrapper">
+                            <img src="../img/profile-placeholder.png" alt="Nidia" class="teacher-card__img">
+                        </div>
+                        <div class="teacher-card__content">
+                            <h3 class="teacher-card__name">Nidia</h3>
+                            <p class="teacher-card__role">Docente de Artística</p>
+                            <p class="teacher-card__bio">El arte como herramienta de transformación social.</p>
+                            <a href="nidia_artistica.html" class="teacher-card__link">Ver Hoja de Vida</a>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- Categoria: Ciencias Económicas y Contabilidad -->
+            <section class="teacher-category">
+                <h2 class="teacher-category__title">Ciencias Económicas y Contabilidad</h2>
+                <div class="teachers-grid">
+                    
+                    <!-- Nubia -->
+                    <article class="teacher-card">
+                        <div class="teacher-card__img-wrapper">
+                            <img src="../img/profile-placeholder.png" alt="Nubia" class="teacher-card__img">
+                        </div>
+                        <div class="teacher-card__content">
+                            <h3 class="teacher-card__name">Nubia</h3>
+                            <p class="teacher-card__role">Docente de Contabilidad</p>
+                            <p class="teacher-card__bio">Formando habilidades contables y financieras para el futuro.</p>
+                            <a href="nubia_contabilidad.html" class="teacher-card__link">Ver Hoja de Vida</a>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
 
         </div>
     </main>
