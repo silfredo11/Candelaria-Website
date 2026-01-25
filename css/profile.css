@@ -1,0 +1,252 @@
+/* =========================================
+   Profile Page Styles (Resume / CV Style)
+   ========================================= */
+
+/* Hero / Header Section */
+.profile-hero {
+    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+    color: var(--color-white);
+    padding: 6rem 1rem 4rem; /* Top padding accounts for fixed header */
+    text-align: center;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    margin-bottom: 2rem;
+}
+
+.profile-hero__container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.profile-hero__img-wrapper {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 6px solid rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.profile-hero__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-hero__info {
+    max-width: 800px;
+}
+
+.profile-hero__name {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    color: var(--color-white);
+    letter-spacing: -0.5px;
+}
+
+.profile-hero__title {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 1rem;
+}
+
+.profile-hero__contact {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.profile-hero__contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.profile-hero__contact-item svg {
+    color: var(--color-gold);
+}
+
+/* Main Content Layout */
+.profile-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem 4rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+    .profile-container {
+        grid-template-columns: 2fr 1fr; /* Main Content | Sidebar */
+    }
+}
+
+/* Sections */
+.profile-section {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--shadow-soft);
+    margin-bottom: 2rem;
+    border: 1px solid var(--color-border);
+}
+
+.profile-section__header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--color-pastel);
+}
+
+.profile-section__icon {
+    background-color: var(--color-pastel);
+    color: var(--color-primary);
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-section__title {
+    font-size: 1.25rem;
+    color: var(--color-secondary);
+    margin: 0;
+}
+
+/* Timeline / Items Styles */
+.profile-item {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 2rem;
+    border-left: 2px solid var(--color-border);
+}
+
+.profile-item:last-child {
+    margin-bottom: 0;
+}
+
+.profile-item::before {
+    content: '';
+    position: absolute;
+    left: -6.5px; /* (11px width - 2px border) / 2 approx, tweaked */
+    top: 5px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    border: 2px solid var(--color-white);
+    box-shadow: 0 0 0 2px var(--color-pastel);
+}
+
+.profile-item__degree {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 0.25rem;
+}
+
+.profile-item__institution {
+    font-size: 0.95rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.profile-item__desc {
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.5;
+}
+
+/* Sidebar Styles */
+.sidebar-card {
+    background: var(--color-white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-soft);
+    border: 1px solid var(--color-border);
+    margin-bottom: 2rem;
+}
+
+.sidebar-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-tag {
+    background-color: var(--color-pastel);
+    color: var(--color-primary-hover);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid rgba(37, 99, 235, 0.1);
+}
+
+.info-list {
+    list-style: none;
+}
+
+.info-list__item {
+    margin-bottom: 1rem;
+}
+
+.info-list__label {
+    display: block;
+    font-size: 0.8rem;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.info-list__value {
+    font-size: 0.95rem;
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+/* Quote */
+.profile-quote {
+    font-style: italic;
+    color: #475569;
+    background-color: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border-left: 4px solid var(--color-gold);
+    margin-top: 2rem;
+}
