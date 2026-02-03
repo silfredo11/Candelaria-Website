@@ -118,7 +118,37 @@
 /* =========================================
    Componente: Profundizaciones (Desktop)
    ========================================= */
-.specializations__grid {
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
-    gap: 2rem;
+
+/* =========================================
+   Modern Editorial Blog Styles (Desktop Overrides)
+   ========================================= */
+.article-hero {
+    height: 85vh;
 }
+
+.editorial-container {
+    max-width: 900px;
+    margin: -100px auto 0; /* More negative margin on desktop */
+}
+
+.editorial-content {
+    padding: 4rem 4rem;
+}
+
+.feature-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 cols on desktop */
+}
+
+.immersive-quote {
+    margin: 4rem -4rem; /* Break out larger on desktop */
+    padding: 5rem;
+}
+
+.full-width-figure {
+    margin: 3rem -4rem 2rem;
+}
+
+.hero-title {
+    font-size: 4.5rem;
+}
+

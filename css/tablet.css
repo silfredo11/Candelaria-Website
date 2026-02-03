@@ -19,4 +19,37 @@
     padding: 0;
 }
 
-/* Carousel en Tablet: Hereda el comportamiento de mobile (calc 100vh - header) */
+
+/* =========================================
+   Modern Editorial Blog Styles (Tablet Overrides)
+   ========================================= */
+.editorial-content {
+    padding: 3rem 2rem;
+}
+
+.article-hero {
+    height: 70vh;
+    background-attachment: fixed; /* Parallax works better on tablets+ */
+}
+
+.immersive-quote {
+    margin: 4rem -2rem;
+    padding: 4rem 2rem;
+}
+
+.full-width-figure {
+    margin: 3rem -2rem;
+}
+
+.full-width-figure img {
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.drop-cap {
+    font-size: 5rem;
+}
+
+.feature-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cols on tablet */
+}
