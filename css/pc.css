@@ -152,3 +152,18 @@
     font-size: 4.5rem;
 }
 
+/* =========================================
+   Componente: Directivos Grid (Desktop)
+   ========================================= */
+.directivos-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns on desktop */
+    gap: 2rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.directivo-card {
+    height: 100%;
+}
+
+

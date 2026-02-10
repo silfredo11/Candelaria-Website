@@ -1911,3 +1911,109 @@ ul {
     transform: translateY(0);
   }
 }
+
+/* =========================================
+   Componente: Tarjetas de Directivos (Modern Grid)
+   ========================================= */
+.directivos-section {
+    padding: 2rem 0 4rem;
+    background-color: var(--color-light); /* Ensure background is consistent */
+}
+
+.directivos-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 column on mobile */
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.directivo-card {
+    background-color: var(--color-white);
+    border-radius: 1rem; /* Rounded corners */
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Equal height cards */
+    border: 1px solid rgba(0,0,0,0.05); /* Subtle border */
+    text-decoration: none; /* Remove link underline */
+}
+
+.directivo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.directivo-card__image-container {
+    width: 100%;
+    height: 250px;
+    background-color: var(--color-pastel); /* Fallback color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.directivo-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.directivo-card:hover .directivo-card__image {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.directivo-card__placeholder-icon {
+    color: var(--color-secondary);
+    opacity: 0.5;
+}
+
+.directivo-card__content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.directivo-card__role {
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-primary);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.directivo-card__name {
+    font-size: var(--text-2xl); /* Larger font for name */
+    color: var(--color-secondary);
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+}
+
+.directivo-card__bio {
+    font-size: var(--text-base);
+    color: var(--color-text);
+    margin-bottom: 1.5rem;
+    flex-grow: 1; /* Pushes link to bottom */
+    line-height: 1.6;
+}
+
+.directivo-card__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    font-size: var(--text-sm);
+    transition: gap 0.2s ease;
+    margin-top: auto; /* Ensures it stays at bottom */
+}
+
+.directivo-card__link:hover {
+    gap: 0.75rem; /* Arrow moves away */
+}
